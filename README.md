@@ -45,11 +45,7 @@ npm run format      # auto-format
 
 Handled via Ansible in [solyto/deployment](https://codeberg.org/solyto/deployment).
 
-
-
 ---
-
-
 
 ## Licensing
 
