@@ -55,7 +55,7 @@ const hero = {
 	subheadline:
 		'Tareas, calendarios, notas, contactos, bibliotecas — un solo lugar, sin tonterías, tus datos te pertenecen.',
 	privacy_note: 'Sin seguimiento. Sin anuncios. Sin venta de datos. Nunca.',
-	cta: 'Pruébalo'
+	cta: 'Empieza — es gratis'
 };
 
 const why = {

@@ -42,7 +42,7 @@ const features = {
 	time_tracker: {
 		title: 'Zeiterfassung',
 		description:
-			'Weiß, wohin deine Zeit geht. Verfolge Projekte, abrechenbare Stunden und Produktivität ohne Stress.'
+			'Behalte im Blick, wohin deine Zeit geht. Verfolge Projekte, abrechenbare Stunden und Produktivität ohne Stress.'
 	},
 	clipboard: {
 		title: 'Zwischenablage',
@@ -55,9 +55,9 @@ const hero = {
 	tagline: 's o l y t o',
 	headline: 'Deine App für alles.',
 	subheadline:
-		'Aufgaben, Kalender, Notizen, Kontakte, Medien — ein Ort, kein Blödsinn, deine Daten bleiben dir gehören.',
+		'Aufgaben, Kalender, Notizen, Kontakte, Medien — ein Ort, kein Blödsinn, deine Daten gehören dir.',
 	privacy_note: 'Keine Verfolgung. Keine Werbung. Kein Datenverkauf. Niemals.',
-	cta: 'Probier es aus'
+	cta: 'Loslegen — kostenlos'
 };
 
 const why = {

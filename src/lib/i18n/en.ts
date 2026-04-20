@@ -55,7 +55,7 @@ const hero = {
 	subheadline:
 		'Todos, calendar, contacts, notes, libraries, news and more — together. No ads, no tracking, no dark patterns. Free forever.',
 	privacy_note: 'No credit card. No trial. No catch.',
-	cta: 'Try it free'
+	cta: "Get started — it's free"
 };
 
 const why = {
