@@ -102,6 +102,21 @@ export interface Theming {
 	exotic_badge: string;
 }
 
+export interface OpenSource {
+	title: string;
+	philosophy_title: string;
+	philosophy: string;
+	selfhost_title: string;
+	selfhost_description: string;
+	selfhost_command: string;
+	links: {
+		github: string;
+		selfhosted: string;
+		contribute: string;
+	};
+	license: string;
+}
+
 export interface Translation {
 	features: Features;
 	hero: Hero;
@@ -114,5 +129,6 @@ export interface Translation {
 	stats: Stats;
 	replaces: Replaces;
 	theming: Theming;
+	opensource: OpenSource;
 	ui: UI;
 }

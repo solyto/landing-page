@@ -7,6 +7,7 @@
 	import ThemingSection from '$lib/components/ThemingSection.svelte'
 	import WhySolyto from '$lib/components/WhySolyto.svelte'
 	import PrivacyGuarantees from '$lib/components/PrivacyGuarantees.svelte'
+	import OpenSource from '$lib/components/OpenSource.svelte'
 	import Pricing from '$lib/components/Pricing.svelte'
 	import TryOutButton from '$lib/components/TryOutButton.svelte'
 
@@ -34,6 +35,8 @@
 	<div class="mx-auto w-full max-w-7xl">
 		<PrivacyGuarantees />
 	</div>
+
+	<OpenSource />
 
 	<div class="mx-auto w-full max-w-2xl px-8">
 		<Pricing />

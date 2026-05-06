@@ -3,5 +3,7 @@ export const urls = {
 	register: 'https://my.solyto.app/auth/register',
 	imprint: '/imprint',
 	privacy: '/privacy',
-	terms: '/terms'
+	terms: '/terms',
+	github: 'https://github.com/solyto/solyto',
+	selfhosted: 'https://github.com/solyto/selfhosted'
 } as const;

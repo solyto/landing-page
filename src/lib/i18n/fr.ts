@@ -245,6 +245,23 @@ const theming = {
 	exotic_badge: 'Culte'
 };
 
+const opensource = {
+	title: 'Open source. Auto-hébergé. Le tien.',
+	philosophy_title: 'Pourquoi open source ?',
+	philosophy:
+		"Nous avons créé solyto parce que nous en avions assez des services qui disparaissent, pivotent ou se dégradent progressivement. Open source signifie que tu peux lire le code, vérifier nos engagements en matière de confidentialité, forker si nous nous trompons, et le logiciel nous survivra. AGPL-3.0 — libre d'utilisation, de modification et d'auto-hébergement. Si tu le distribues ou le proposes en tant que service, ton code source doit rester ouvert.",
+	selfhost_title: 'Sur ton propre serveur',
+	selfhost_description:
+		'Stack Docker Compose, images prêtes à l\'emploi, Traefik avec TLS automatique inclus. Fonctionne sur un Raspberry Pi. Une commande pour tout lancer.',
+	selfhost_command: 'curl -fsSL "https://raw.githubusercontent.com/solyto/selfhosted/main/setup.sh" | bash',
+	links: {
+		github: 'Voir sur GitHub',
+		selfhosted: 'Guide d\'auto-hébergement',
+		contribute: 'Contribuer'
+	},
+	license: 'Licence AGPL-3.0'
+};
+
 export const fr = {
 	features,
 	hero,
@@ -257,5 +274,6 @@ export const fr = {
 	stats,
 	replaces,
 	theming,
+	opensource,
 	ui
 };

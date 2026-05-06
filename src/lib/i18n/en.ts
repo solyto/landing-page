@@ -237,6 +237,23 @@ const replaces = {
 	],
 };
 
+const opensource = {
+	title: 'Open source. Self-hosted. Yours.',
+	philosophy_title: 'Why open source?',
+	philosophy:
+		"We built solyto because we were tired of services that disappear, pivot, or slowly get worse. Open source means you can read the code, verify our privacy claims, fork if we ever go wrong, and the software outlives us. AGPL-3.0 — free to use, modify, and self-host. If you distribute it or run it as a service, your source stays open too.",
+	selfhost_title: 'Run it on your own server',
+	selfhost_description:
+		'Docker Compose stack, pre-built images, Traefik with automatic TLS included. Runs on a Raspberry Pi. One command to get everything going.',
+	selfhost_command: 'curl -fsSL "https://raw.githubusercontent.com/solyto/selfhosted/main/setup.sh" | bash',
+	links: {
+		github: 'View on GitHub',
+		selfhosted: 'Self-hosting guide',
+		contribute: 'Contribute'
+	},
+	license: 'AGPL-3.0 Licensed'
+};
+
 export const en = {
 	features,
 	hero,
@@ -249,5 +266,6 @@ export const en = {
 	stats,
 	replaces,
 	theming,
+	opensource,
 	ui
 };
