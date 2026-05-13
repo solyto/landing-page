@@ -12,7 +12,7 @@ const features = {
 	calendar: {
 		title: 'Kalender',
 		description:
-			'Dein Zeitplan ohne Aufblähung. Synchronisiert mit CalDAV, wenn du es brauchst. Keine "schlauen" Vorschläge, kein Meeting-Spam.'
+			'Dein Zeitplan ohne Schnickschnack. Synchronisiert mit CalDAV, wenn du es brauchst. Keine "schlauen" Vorschläge, kein Meeting-Spam.'
 	},
 	news: {
 		title: 'Nachrichten',
@@ -62,7 +62,7 @@ const hero = {
 
 const why = {
 	title: 'Warum solyto?',
-	intro: 'Aus Frustration über das, was es gibt, entstanden.',
+	intro: 'Entstanden aus Frustration über das, was es gibt.',
 	points: [
 		{
 			title: 'Deine Daten, deine Server',
@@ -72,22 +72,22 @@ const why = {
 		{
 			title: 'Software, die dich respektiert',
 			description:
-				'Keine Schuldgefühle machenden Benachrichtigungen, keine künstliche Dringlichkeit, keine Manipulation.'
+				'Keine Benachrichtigungen, die dir ein schlechtes Gewissen machen, keine künstliche Dringlichkeit, keine Manipulation.'
 		},
 		{
 			title: 'Kostenlos bedeutet kostenlos',
 			description:
-				'Keine Kreditkarte, keine Testphase, keine Werbung, keine versteckten Stufen. Wenn sich das jemals ändert, besprechen wir es zuerst mit unserer Gemeinschaft.'
+				'Keine Kreditkarte, keine Testphase, keine Werbung, keine versteckten Preisstufen. Wenn sich das jemals ändert, besprechen wir es zuerst mit unserer Community.'
 		},
 		{
-			title: 'Gemeinschaft zuerst',
+			title: 'Community zuerst',
 			description:
 				'Wir hören auf Feedback, entwickeln Funktionen basierend auf Vorschlägen und respektieren dein Vertrauen.'
 		},
 		{
 			title: 'Werkzeuge, die ihren Job machen',
 			description:
-				'Funktionen, die tun, was sie sollen — keine KI-Schichten um des Trends willen, keine Vorschläge, die niemand gefragt hat.'
+				'Funktionen, die tun, was sie sollen — keine KI-Gimmicks nur des Hypes wegen, keine Vorschläge, die niemand gefragt hat.'
 		}
 	]
 };
@@ -99,7 +99,7 @@ const pricing = {
 		'solyto ist kostenlos zu verwenden. Keine Kreditkarte erforderlich, keine Testphase, keine Funktionsbeschränkungen.',
 	promise_title: 'Unser Versprechen',
 	promise: 'Wenn du keine finanziellen Möglichkeiten hast, musst du nie für solyto bezahlen.',
-	note: 'solyto läuft schlank — keine Investoren, keine Werbeeinnahmen, kein Gewinnmotiv. Nur Server und Zeit. Wenn die Kosten jemals das Tragbare übersteigen, besprechen wir es offen mit der Gemeinschaft, bevor sich etwas ändert.'
+	note: 'solyto bleibt bewusst schlank — keine Investoren, keine Werbeeinnahmen, kein Gewinnmotiv. Nur Server und Zeit. Wenn die Kosten jemals das Tragbare übersteigen, besprechen wir es offen mit der Community, bevor sich etwas ändert.'
 };
 
 const faq = {
@@ -107,7 +107,7 @@ const faq = {
 	items: [
 		{
 			question: 'Ist es wirklich kostenlos?',
-			answer: 'Ja. Wenn wir das jemals ändern müssen, besprechen wir es zuerst mit unserer Gemeinschaft. Und wenn du nicht bezahlen kannst, musst du es nicht. Das ist ein Versprechen.'
+			answer: 'Ja. Wenn wir das jemals ändern müssen, besprechen wir es zuerst mit unserer Community. Und wenn du nicht bezahlen kannst, musst du es nicht. Das ist ein Versprechen.'
 		},
 		{
 			question: 'Wird es je Werbung geben?',
@@ -167,7 +167,7 @@ const how_it_works = {
 		},
 		{
 			feature: 'calendar',
-			title: 'Plane deine Zeit, deine Art',
+			title: 'Plane deine Zeit, auf deine Weise',
 			description:
 				'Dein Zeitplan, vereinfacht. Füge Ereignisse hinzu, setze Erinnerungen, synchronisiere mit anderen Kalendern, wenn du möchtest. Keine "schlauen" Vorschläge, kein Meeting-Spam.'
 		},
@@ -175,11 +175,11 @@ const how_it_works = {
 			feature: 'notebook',
 			title: 'Erfasse, was wichtig ist',
 			description:
-				'Schreib Ideen, Meeting-Notizen oder zufällige Gedanken auf. Ordne sie, wie du willst, find sie, wenn du sie brauchst. Einfach und zuverlässig.'
+				'Schreib Ideen, Meeting-Notizen oder zufällige Gedanken auf. Ordne sie, wie du willst, finde sie, wenn du sie brauchst. Einfach und zuverlässig.'
 		},
 		{
 			feature: 'libraries',
-			title: 'Wisse, was du besitzt',
+			title: 'Behalte den Überblick über deine Sammlung',
 			description:
 				'Verfolge deine Bücher, Filme, Musik und Spiele. Sieh, was du hast, was du gelesen hast, was du als nächstes willst. Keine algorithmischen Empfehlungen — nur deine Sammlung.'
 		},
@@ -238,7 +238,7 @@ const theming = {
 	label: 'Mach es deins',
 	title: 'Dein Raum, dein Look.',
 	description:
-		'Wähl ein Theme, das zu dir passt — minimal, dunkel, warm oder mit Charakter. Skyrim-Fan? Gibt\'s ein Theme dafür.',
+		'Wähle ein Theme, das zu dir passt — minimal, dunkel, warm oder mit Charakter. Skyrim-Fan? Gibt\'s ein Theme dafür.',
 	exotic_badge: 'Kult'
 };
 
