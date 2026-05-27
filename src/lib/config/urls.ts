@@ -5,5 +5,6 @@ export const urls = {
 	privacy: '/privacy',
 	terms: '/terms',
 	github: 'https://github.com/solyto/solyto',
-	selfhosted: 'https://github.com/solyto/selfhosted'
+	selfhosted: 'https://github.com/solyto/selfhosted',
+	discord: 'https://discord.gg/REyWQKgUcq'
 } as const;
