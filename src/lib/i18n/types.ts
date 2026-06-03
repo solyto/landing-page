@@ -117,6 +117,21 @@ export interface OpenSource {
 	license: string;
 }
 
+export interface Downloads {
+	title: string;
+	subtitle: string;
+	platforms: {
+		windows: { label: string; available: boolean };
+		macos: { label: string; available: boolean };
+		linux: { label: string; available: boolean };
+		android: { label: string; available: boolean };
+		ios: { label: string; available: boolean };
+	};
+	coming_soon: string;
+	download: string;
+	all_releases: string;
+}
+
 export interface Translation {
 	features: Features;
 	hero: Hero;
@@ -130,5 +145,6 @@ export interface Translation {
 	replaces: Replaces;
 	theming: Theming;
 	opensource: OpenSource;
+	downloads: Downloads;
 	ui: UI;
 }

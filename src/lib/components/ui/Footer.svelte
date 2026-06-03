@@ -29,7 +29,7 @@
 </script>
 
 <div
-	class="relative z-30 mt-12 flex w-full items-center justify-center gap-8 bg-white p-6 pt-8 font-bold dark:bg-s-dark-2"
+	class="relative z-30 mt-12 flex w-full items-center justify-center gap-8 bg-white p-6 pt-8 font-bold dark:bg-s-dark-3"
 >
 	<div class="absolute top-0 h-2 w-full bg-gradient-to-r from-s-lightblue to-s-green"></div>
 	<a href="#legal-notice" class="cursor-pointer" onclick={handleLegalClick}

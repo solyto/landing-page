@@ -13,7 +13,7 @@
 	])
 </script>
 
-<div class="w-full bg-s-dark-2 py-10 md:py-14">
+<div class="w-full bg-s-teal/8 border-y border-s-teal/15 py-10 md:py-14">
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="flex flex-wrap justify-center gap-10 md:gap-20">
 			{#each items as item, i}
@@ -24,7 +24,7 @@
 					<span class="text-4xl md:text-5xl font-bold text-s-teal tracking-tight tabular-nums">
 						{item.value}
 					</span>
-					<span class="text-xs text-gray-400 uppercase tracking-widest">
+					<span class="text-xs text-gray-500 uppercase tracking-widest">
 						{item.label}
 					</span>
 				</div>

@@ -8,6 +8,7 @@
 	import WhySolyto from '$lib/components/WhySolyto.svelte'
 	import PrivacyGuarantees from '$lib/components/PrivacyGuarantees.svelte'
 	import OpenSource from '$lib/components/OpenSource.svelte'
+	import DownloadSection from '$lib/components/DownloadSection.svelte'
 	import Pricing from '$lib/components/Pricing.svelte'
 	import TryOutButton from '$lib/components/TryOutButton.svelte'
 
@@ -35,6 +36,8 @@
 	<div class="px-4">
 		<PrivacyGuarantees />
 	</div>
+
+	<DownloadSection />
 
 	<OpenSource />
 

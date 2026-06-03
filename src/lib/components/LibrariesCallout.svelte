@@ -4,7 +4,7 @@
 
 	const ts = getTranslation()
 
-	const mediaTypes = ['Books', 'Movies', 'Music', 'Games', 'Recipes', 'Links', 'Quotes']
+	const mediaTypes = ['Books', 'Movies', 'Music', 'Games', 'Recipes', 'Links', 'Quotes', 'Plants']
 </script>
 
 <section class="w-full bg-s-teal/8 dark:bg-s-teal/5 py-16 md:py-24 border-y border-s-teal/15 dark:border-s-teal/10">

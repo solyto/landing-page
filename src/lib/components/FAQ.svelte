@@ -22,7 +22,7 @@
 	<div class="mx-auto flex max-w-2xl flex-col gap-3">
 		{#each ts.get.faq.items as item, index}
 			<div
-				class="overflow-hidden rounded-2xl border border-gray-100 bg-white transition-shadow duration-300 dark:border-s-dark-3 dark:bg-s-dark-2 {openIndex ===
+				class="overflow-hidden rounded-2xl border border-gray-100 bg-white transition-shadow duration-300 dark:border-s-dark-3 dark:bg-s-dark-3 {openIndex ===
 				index
 					? 'shadow-lg'
 					: 'shadow-sm hover:shadow-md'}"

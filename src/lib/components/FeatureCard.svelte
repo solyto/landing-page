@@ -17,7 +17,7 @@
 	class="group relative flex cursor-pointer flex-col gap-3 rounded-2xl border-2 p-6 text-left transition-all duration-300
 		{active
 		? 'border-s-lightblue/30 bg-gradient-to-br from-s-lightblue/10 to-s-green/10 dark:border-s-lightblue/20 dark:from-s-lightblue/5 dark:to-s-green/5'
-		: 'border-transparent bg-white/50 hover:border-gray-100 hover:bg-white dark:bg-s-dark-2/50 dark:hover:border-s-dark-3 dark:hover:bg-s-dark-2'}"
+		: 'border-transparent bg-white/50 hover:border-gray-100 hover:bg-white dark:bg-s-dark-3/50 dark:hover:border-s-dark-3 dark:hover:bg-s-dark-2'}"
 	{onclick}
 	in:blur
 >

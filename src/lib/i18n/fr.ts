@@ -127,7 +127,7 @@ const faq = {
 		},
 		{
 			question: 'Y a-t-il une application mobile?',
-			answer: "solyto est une application web progressive (PWA). Installe-la sur n'importe quel appareil directement depuis ton navigateur — aucun magasin d'applications requis."
+			answer: "solyto est une application web progressive (PWA). Installe-la sur n'importe quel appareil directement depuis ton navigateur — aucun magasin d'applications requis. Nous proposons également une app de bureau native pour Windows, macOS et Linux."
 		}
 	]
 };
@@ -262,6 +262,21 @@ const opensource = {
 	license: 'Licence AGPL-3.0'
 };
 
+const downloads = {
+	title: "Télécharger l'app",
+	subtitle: 'Applications natives pour chaque plateforme.',
+	platforms: {
+		windows: { label: 'Windows', available: true },
+		macos: { label: 'macOS', available: true },
+		linux: { label: 'Linux', available: true },
+		android: { label: 'Android', available: false },
+		ios: { label: 'iOS', available: false }
+	},
+	coming_soon: 'Bientôt disponible',
+	download: 'Télécharger',
+	all_releases: 'Toutes les versions et changelogs'
+};
+
 export const fr = {
 	features,
 	hero,
@@ -275,5 +290,6 @@ export const fr = {
 	replaces,
 	theming,
 	opensource,
+	downloads,
 	ui
 };

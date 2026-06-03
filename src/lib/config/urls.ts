@@ -6,5 +6,6 @@ export const urls = {
 	terms: '/terms',
 	github: 'https://github.com/solyto/solyto',
 	selfhosted: 'https://github.com/solyto/selfhosted',
-	discord: 'https://discord.gg/REyWQKgUcq'
+	discord: 'https://discord.gg/REyWQKgUcq',
+	releases: 'https://github.com/solyto/desktop/releases/latest'
 } as const;

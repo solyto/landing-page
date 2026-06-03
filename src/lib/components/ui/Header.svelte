@@ -63,7 +63,7 @@
 				{#if langOpen}
 					<div class="fixed inset-0 z-10" onclick={() => (langOpen = false)}></div>
 					<div
-						class="absolute top-full left-0 z-20 mt-2 overflow-hidden rounded-2xl bg-white shadow-xl dark:bg-s-dark-2"
+						class="absolute top-full left-0 z-20 mt-2 overflow-hidden rounded-2xl bg-white shadow-xl dark:bg-s-dark-3"
 						transition:scale={{ duration: 150, start: 0.95 }}
 					>
 						{#each languages as lang}
