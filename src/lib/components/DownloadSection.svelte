@@ -5,10 +5,20 @@
 
 	const ts = getTranslation()
 
-	const platformLinks: Record<string, string> = {
-		windows: urls.releases,
-		macos: urls.releases,
-		linux: urls.releases
+	type LinuxFormat = 'deb' | 'rpm' | 'appimage'
+	let linuxFormat = $state<LinuxFormat>('deb')
+
+	const linuxFormats: { id: LinuxFormat; label: string }[] = [
+		{ id: 'deb', label: '.deb' },
+		{ id: 'rpm', label: '.rpm' },
+		{ id: 'appimage', label: '.AppImage' }
+	]
+
+	function getLink(key: string): string {
+		if (key === 'windows') return urls.downloads.windows
+		if (key === 'macos') return urls.downloads.macos
+		if (key === 'linux') return urls.downloads.linux[linuxFormat]
+		return ''
 	}
 </script>
 
@@ -25,15 +35,27 @@
 
 		<div class="reveal grid grid-cols-2 md:grid-cols-5 gap-3" use:reveal={{ delay: 100 }}>
 			{#each Object.entries(ts.get.downloads.platforms) as [key, platform]}
-				{@const link = platformLinks[key]}
-				{#if platform.available && link}
+				{#if platform.available}
 					<a
-						href={link}
-						target="_blank"
-						rel="noopener noreferrer"
+						href={getLink(key)}
 						class="group flex flex-col items-center gap-3 rounded-2xl border border-s-teal/25 bg-s-teal/5 p-6 transition-all hover:border-s-teal hover:bg-s-teal/10"
 					>
 						<span class="text-xl font-bold text-gray-900">{platform.label}</span>
+
+						{#if key === 'linux'}
+							<div class="flex rounded-lg border border-s-teal/30 overflow-hidden text-xs font-semibold">
+								{#each linuxFormats as fmt}
+									<button
+										type="button"
+										onclick={(e) => { e.preventDefault(); linuxFormat = fmt.id }}
+										class="px-2 py-1 transition-colors {linuxFormat === fmt.id ? 'bg-s-teal text-white' : 'text-s-teal hover:bg-s-teal/10'}"
+									>
+										{fmt.label}
+									</button>
+								{/each}
+							</div>
+						{/if}
+
 						<span class="text-xs font-semibold text-s-teal uppercase tracking-widest">
 							{ts.get.downloads.download} ↓
 						</span>
@@ -47,17 +69,6 @@
 					</div>
 				{/if}
 			{/each}
-		</div>
-
-		<div class="reveal mt-8 text-center" use:reveal={{ delay: 200 }}>
-			<a
-				href={urls.releases}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="text-sm text-gray-400 hover:text-s-teal transition-colors"
-			>
-				{ts.get.downloads.all_releases} →
-			</a>
 		</div>
 	</div>
 </section>
