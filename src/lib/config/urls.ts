@@ -21,6 +21,6 @@ export const urls = {
 			rpm: `https://github.com/solyto/desktop/releases/download/v${dv}/solyto-${dv}.rpm`,
 			appimage: `https://github.com/solyto/desktop/releases/download/v${dv}/solyto-${dv}.AppImage`
 		},
-		android: `https://github.com/solyto/mobile/releases/download/v${mv}/app-release.apk`
+		android: `https://github.com/solyto/mobile/releases/download/v${mv}/solyto-${mv}.apk`
 	}
 };
