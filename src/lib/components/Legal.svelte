@@ -14,7 +14,7 @@
 			<p>
 				solyto<br />
 				c/o flexdienst - #10451<br />
-				Kurt-Schumacher-Straße 76<br />
+				Kurt-Schumacher-Straße 74<br />
 				67663 Kaiserslautern<br />
 				Germany
 			</p>
@@ -30,7 +30,7 @@
 			<p>
 				solyto<br />
 				c/o flexdienst - #10451<br />
-				Kurt-Schumacher-Straße 76<br />
+				Kurt-Schumacher-Straße 74<br />
 				67663 Kaiserslautern<br />
 				Germany
 			</p>
@@ -62,7 +62,7 @@
 			<p>
 				solyto<br />
 				c/o flexdienst - #10451<br />
-				Kurt-Schumacher-Straße 76<br />
+				Kurt-Schumacher-Straße 74<br />
 				67663 Kaiserslautern<br />
 				Deutschland
 			</p>
@@ -78,7 +78,7 @@
 			<p>
 				solyto<br />
 				c/o flexdienst - #10451<br />
-				Kurt-Schumacher-Straße 76<br />
+				Kurt-Schumacher-Straße 74<br />
 				67663 Kaiserslautern<br />
 				Deutschland
 			</p>

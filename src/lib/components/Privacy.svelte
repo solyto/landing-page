@@ -22,7 +22,7 @@
 				The data controller responsible for data processing on this website is:<br /><br />
 				solyto<br />
 				c/o flexdienst - #10451<br />
-				Kurt-Schumacher-Straße 76<br />
+				Kurt-Schumacher-Straße 74<br />
 				67663 Kaiserslautern<br />
 				Germany<br /><br />
 				Email: privacy [at] solyto.app
@@ -215,7 +215,7 @@
 				Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br /><br />
 				solyto<br />
 				c/o flexdienst - #10451<br />
-				Kurt-Schumacher-Straße 76<br />
+				Kurt-Schumacher-Straße 74<br />
 				67663 Kaiserslautern<br />
 				Deutschland<br /><br />
 				E-Mail: privacy [at] solyto.app

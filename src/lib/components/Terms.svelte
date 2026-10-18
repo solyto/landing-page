@@ -16,7 +16,7 @@
 				(collectively, the "Service"). The Service is provided by:<br /><br />
 				solyto<br />
 				c/o flexdienst - #10451<br />
-				Kurt-Schumacher-Straße 76<br />
+				Kurt-Schumacher-Straße 74<br />
 				67663 Kaiserslautern<br />
 				Germany<br /><br />
 				By registering for or using the Service, you agree to these Terms. If you do not agree,
@@ -189,7 +189,7 @@
 				Website (zusammen der "Dienst"). Der Dienst wird bereitgestellt von:<br /><br />
 				solyto<br />
 				c/o flexdienst - #10451<br />
-				Kurt-Schumacher-Straße 76<br />
+				Kurt-Schumacher-Straße 74<br />
 				67663 Kaiserslautern<br />
 				Deutschland<br /><br />
 				Mit der Registrierung oder Nutzung des Dienstes stimmen Sie diesen AGB zu. Falls Sie
