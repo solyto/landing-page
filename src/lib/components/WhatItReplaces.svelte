@@ -11,7 +11,7 @@
 			<h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
 				{ts.get.replaces.title}
 			</h2>
-			<p class="text-lg text-gray-500 dark:text-gray-400 max-w-xl">
+			<p class="text-lg text-gray-500 dark:text-gray-400 max-w-3xl">
 				{ts.get.replaces.subtitle}
 			</p>
 		</div>

@@ -2,7 +2,9 @@ const features = {
 	libraries: {
 		title: 'Medien',
 		description:
-			'Verwalte deine Bücher, Musik, Filme, Spiele, Rezepte, Links und Zitate. Keine algorithmischen Empfehlungen, kein "Vielleicht gefällt dir auch" Spam. Nur deine Sachen, organisiert.'
+			'Verwalte deine Bücher, Musik, Filme, Spiele, Rezepte, Links und Zitate. Keine algorithmischen Empfehlungen, kein "Vielleicht gefällt dir auch" Spam. Nur deine Sachen, organisiert.',
+		tagline: 'Verfolge und organisiere all deine Medien.',
+		media_types: ['Bücher', 'Filme', 'Musik', 'Spiele', 'Rezepte', 'Links', 'Zitate', 'Pflanzen']
 	},
 	todos: {
 		title: 'Aufgaben',
@@ -53,11 +55,12 @@ const features = {
 
 const hero = {
 	tagline: 's o l y t o',
-	headline: 'Deine App für alles.',
+	headline: 'Eine App für alles.',
 	subheadline:
 		'Aufgaben, Kalender, Notizen, Kontakte, Medien — ein Ort, kein Blödsinn, deine Daten gehören dir.',
 	privacy_note: 'Keine Verfolgung. Keine Werbung. Kein Datenverkauf. Niemals.',
-	cta: 'Loslegen — kostenlos'
+	cta: 'Loslegen — kostenlos',
+	screenshot_alt: 'solyto-Dashboard'
 };
 
 const why = {
@@ -99,7 +102,9 @@ const pricing = {
 		'solyto ist kostenlos zu verwenden. Keine Kreditkarte erforderlich, keine Testphase, keine Funktionsbeschränkungen.',
 	promise_title: 'Unser Versprechen',
 	promise: 'Wenn du keine finanziellen Möglichkeiten hast, musst du nie für solyto bezahlen.',
-	note: 'solyto bleibt bewusst schlank — keine Investoren, keine Werbeeinnahmen, kein Gewinnmotiv. Nur Server und Zeit. Wenn die Kosten jemals das Tragbare übersteigen, besprechen wir es offen mit der Community, bevor sich etwas ändert.'
+	note: 'solyto bleibt bewusst schlank — keine Investoren, keine Werbeeinnahmen, kein Gewinnmotiv. Nur Server und Zeit. Wenn die Kosten jemals das Tragbare übersteigen, besprechen wir es offen mit der Community, bevor sich etwas ändert.',
+	per_period: '/für immer',
+	no_catch: 'Keine Kreditkarte. Kein Haken.'
 };
 
 const faq = {
@@ -199,7 +204,8 @@ const how_it_works = {
 
 const showcase = {
 	title: 'Alles, was du brauchst',
-	subtitle: 'Eine App, all deine Sachen. Kein Wechsel zwischen Dutzenden Diensten.'
+	subtitle: 'Eine App, all deine Sachen. Kein Wechsel zwischen Dutzenden Diensten.',
+	unique_badge: 'Nur bei solyto'
 };
 
 const ui = {
@@ -236,14 +242,14 @@ const replaces = {
 
 const theming = {
 	label: 'Mach es deins',
-	title: 'Dein Raum, dein Look.',
+	title: 'Ändere das Aussehen.',
 	description:
 		'Wähle ein Theme, das zu dir passt — minimal, dunkel, warm oder mit Charakter. Skyrim-Fan? Gibt\'s ein Theme dafür.',
 	exotic_badge: 'Kult'
 };
 
 const opensource = {
-	title: 'Open Source. Selbst gehostet. Deins.',
+	title: 'Open Source. Selbst gehostet.',
 	philosophy_title: 'Warum Open Source?',
 	philosophy:
 		'Wir haben solyto gebaut, weil wir es satt hatten, dass Dienste verschwinden, sich verändern oder langsam schlechter werden. Open Source bedeutet: Du kannst den Code lesen, unsere Datenschutzversprechen überprüfen, forken wenn wir jemals falsch liegen, und die Software überlebt uns. AGPL-3.0 — kostenlos nutzbar, änderbar und selbst hostbar. Wer es verteilt oder als Service betreibt, muss den Quellcode offenhalten.',
@@ -266,12 +272,20 @@ const downloads = {
 		windows: { label: 'Windows', available: true },
 		macos: { label: 'macOS', available: true },
 		linux: { label: 'Linux', available: true },
-		android: { label: 'Android', available: false },
+		android: { label: 'Android', available: true },
 		ios: { label: 'iOS', available: false }
 	},
 	coming_soon: 'Demnächst',
 	download: 'Herunterladen',
 	all_releases: 'Alle Versionen & Changelogs'
+};
+
+const meta = {
+	title: 'solyto — Deine App für alles',
+	description:
+		'Aufgaben, Kalender, Notizen, Kontakte, Medien — ein Ort, kein Blödsinn, deine Daten gehören dir. Keine Verfolgung. Keine Werbung. Niemals.',
+	social_description:
+		'Aufgaben, Kalender, Notizen, Kontakte, Medien — ein Ort, kein Blödsinn, deine Daten gehören dir.'
 };
 
 export const de = {
@@ -288,5 +302,6 @@ export const de = {
 	theming,
 	opensource,
 	downloads,
-	ui
+	ui,
+	meta
 };

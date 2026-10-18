@@ -41,7 +41,7 @@
 		<div
 			class="rounded-2xl overflow-hidden border border-gray-200 dark:border-s-dark-3 shadow-2xl"
 		>
-			<img src={HeroDesktop} alt="solyto dashboard" class="w-full h-auto block" />
+			<img src={HeroDesktop} alt={ts.get.hero.screenshot_alt} class="w-full h-auto block" />
 		</div>
 	</div>
 </div>
@@ -76,6 +76,6 @@
 		class="rounded-2xl overflow-hidden border border-gray-200 dark:border-s-dark-3 shadow-xl"
 		in:fly={{ y: 20, duration: 600, delay: 400 }}
 	>
-		<img src={HeroMobile} alt="solyto dashboard" class="w-full h-auto block" />
+		<img src={HeroMobile} alt={ts.get.hero.screenshot_alt} class="w-full h-auto block" />
 	</div>
 </div>

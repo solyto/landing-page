@@ -10,8 +10,10 @@
 	import { getViewPoint } from '$lib/state/Viewpoint.svelte.js';
 	import DesktopLandingPage from '$lib/components/DesktopLandingPage.svelte';
 	import MobileLandingPage from '$lib/components/MobileLandingPage.svelte';
+	import { getTranslation } from '$lib/state/Translation.svelte';
 
 	const viewPoint = getViewPoint();
+	const ts = getTranslation();
 
 	let shouldLoad = $state<boolean>(false);
 	let loaded = $state<boolean>(false);
@@ -70,17 +72,17 @@
 			{/if}
 		{/if}
 		{#if legal}
-			<Modal onClose={closeModals} title="Legal Notice">
+			<Modal onClose={closeModals} title={ts.get.ui.legal_notice}>
 				<Legal />
 			</Modal>
 		{/if}
 		{#if privacy}
-			<Modal onClose={closeModals} title="Privacy Policy">
+			<Modal onClose={closeModals} title={ts.get.ui.privacy_policy}>
 				<Privacy />
 			</Modal>
 		{/if}
 		{#if terms}
-			<Modal onClose={closeModals} title="Terms of Service">
+			<Modal onClose={closeModals} title={ts.get.ui.terms_of_service}>
 				<Terms />
 			</Modal>
 		{/if}

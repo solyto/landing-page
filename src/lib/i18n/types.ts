@@ -1,5 +1,5 @@
 export interface Features {
-	libraries: { title: string; description: string };
+	libraries: { title: string; description: string; tagline: string; media_types: string[] };
 	todos: { title: string; description: string };
 	calendar: { title: string; description: string };
 	contacts: { title: string; description: string };
@@ -17,6 +17,7 @@ export interface Hero {
 	subheadline: string;
 	privacy_note: string;
 	cta: string;
+	screenshot_alt: string;
 }
 
 export interface Why {
@@ -32,6 +33,8 @@ export interface Pricing {
 	promise_title: string;
 	promise: string;
 	note: string;
+	per_period: string;
+	no_catch: string;
 }
 
 export interface FAQ {
@@ -42,6 +45,13 @@ export interface FAQ {
 export interface Showcase {
 	title: string;
 	subtitle: string;
+	unique_badge: string;
+}
+
+export interface Meta {
+	title: string;
+	description: string;
+	social_description: string;
 }
 
 export interface PrivacyGuarantees {
@@ -147,4 +157,5 @@ export interface Translation {
 	opensource: OpenSource;
 	downloads: Downloads;
 	ui: UI;
+	meta: Meta;
 }

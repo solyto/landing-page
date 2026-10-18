@@ -4,7 +4,6 @@
 
 	const ts = getTranslation()
 
-	const mediaTypes = ['Books', 'Movies', 'Music', 'Games', 'Recipes', 'Links', 'Quotes', 'Plants']
 </script>
 
 <section class="w-full bg-s-teal/8 dark:bg-s-teal/5 py-16 md:py-24 border-y border-s-teal/15 dark:border-s-teal/10">
@@ -13,7 +12,7 @@
 			<div class="reveal reveal-left flex-1" use:reveal>
 				<h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
 					{ts.get.features.libraries.title}.
-					<span class="text-s-teal">The only organizer that tracks your whole media life.</span>
+					<span class="text-s-teal">{ts.get.features.libraries.tagline}</span>
 				</h2>
 			</div>
 
@@ -22,7 +21,7 @@
 					{ts.get.features.libraries.description}
 				</p>
 				<div class="flex flex-wrap gap-2">
-					{#each mediaTypes as type, i}
+					{#each ts.get.features.libraries.media_types as type, i}
 						<span
 							class="reveal text-sm font-medium px-3 py-1.5 rounded-full border border-s-teal/30 text-s-teal bg-s-teal/5"
 							use:reveal={{ delay: 200 + i * 50 }}

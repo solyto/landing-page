@@ -2,7 +2,9 @@ const features = {
 	libraries: {
 		title: 'Libraries',
 		description:
-			'Track your books, music, movies, games, recipes, links and quotes. No algorithmic recommendations, no "you might also like" spam. Just your stuff, organized.'
+			'Track your books, music, movies, games, recipes, links and quotes. No algorithmic recommendations, no "you might also like" spam. Just your stuff, organized.',
+		tagline: 'Track and organize your whole media life.',
+		media_types: ['Books', 'Movies', 'Music', 'Games', 'Recipes', 'Links', 'Quotes', 'Plants']
 	},
 	todos: {
 		title: 'Todos',
@@ -51,11 +53,12 @@ const features = {
 
 const hero = {
 	tagline: 's o l y t o',
-	headline: 'One app for your whole life.',
+	headline: 'One app for everything.',
 	subheadline:
 		'Todos, calendar, contacts, notes, libraries, news and more — together. No ads, no tracking, no dark patterns. Free forever.',
 	privacy_note: 'No credit card. No trial. No catch.',
-	cta: "Get started — it's free"
+	cta: "Get started — it's free",
+	screenshot_alt: 'solyto dashboard'
 };
 
 const why = {
@@ -96,7 +99,9 @@ const pricing = {
 		'solyto is free to use. No credit card required, no trial period, no feature limitations.',
 	promise_title: 'Our Promise',
 	promise: "If you don't have financial capacities, you will never have to pay for solyto.",
-	note: "solyto runs lean — no investors, no ad revenue, no profit motive. Just servers and time. If costs ever grow beyond what's sustainable, we'll talk about it openly with the community before anything changes."
+	note: "solyto runs lean — no investors, no ad revenue, no profit motive. Just servers and time. If costs ever grow beyond what's sustainable, we'll talk about it openly with the community before anything changes.",
+	per_period: '/forever',
+	no_catch: 'No credit card. No catch.'
 };
 
 const faq = {
@@ -194,7 +199,8 @@ const how_it_works = {
 
 const showcase = {
 	title: 'Everything you need',
-	subtitle: 'One app, all your stuff. No switching between a dozen services.'
+	subtitle: 'One app, all your stuff. No switching between a dozen services.',
+	unique_badge: 'Unique to solyto'
 };
 
 const ui = {
@@ -216,7 +222,7 @@ const stats = {
 
 const theming = {
 	label: 'Make it yours',
-	title: 'Your space, your look.',
+	title: 'Change the look.',
 	description:
 		'Pick a theme that fits your vibe — minimal, dark, warm, or full personality. Skyrim fan? There\'s a theme for that.',
 	exotic_badge: 'Cult'
@@ -238,7 +244,7 @@ const replaces = {
 };
 
 const opensource = {
-	title: 'Open source. Self-hosted. Yours.',
+	title: 'Open source. Self-hosted.',
 	philosophy_title: 'Why open source?',
 	philosophy:
 		"We built solyto because we were tired of services that disappear, pivot, or slowly get worse. Open source means you can read the code, verify our privacy claims, fork if we ever go wrong, and the software outlives us. AGPL-3.0 — free to use, modify, and self-host. If you distribute it or run it as a service, your source stays open too.",
@@ -261,12 +267,20 @@ const downloads = {
 		windows: { label: 'Windows', available: true },
 		macos: { label: 'macOS', available: true },
 		linux: { label: 'Linux', available: true },
-		android: { label: 'Android', available: false },
+		android: { label: 'Android', available: true },
 		ios: { label: 'iOS', available: false }
 	},
 	coming_soon: 'Coming soon',
 	download: 'Download',
 	all_releases: 'All releases & changelogs'
+};
+
+const meta = {
+	title: 'solyto — Your app for everything',
+	description:
+		'Todos, calendars, notes, contacts, libraries — one place, no nonsense, your data stays yours. No tracking. No ads. Ever.',
+	social_description:
+		'Todos, calendars, notes, contacts, libraries — one place, no nonsense, your data stays yours.'
 };
 
 export const en = {
@@ -283,5 +297,6 @@ export const en = {
 	theming,
 	opensource,
 	downloads,
-	ui
+	ui,
+	meta
 };

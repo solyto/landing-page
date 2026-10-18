@@ -2,7 +2,9 @@ const features = {
 	libraries: {
 		title: 'Bibliothèques',
 		description:
-			'Suis tes livres, musique, films, jeux, recettes, liens et citations. Pas de recommandations algorithmiques, pas de spam "tu aimeras peut-être aussi". Juste tes affaires, organisées.'
+			'Suis tes livres, musique, films, jeux, recettes, liens et citations. Pas de recommandations algorithmiques, pas de spam "tu aimeras peut-être aussi". Juste tes affaires, organisées.',
+		tagline: 'Suis et organise tous tes médias.',
+		media_types: ['Livres', 'Films', 'Musique', 'Jeux', 'Recettes', 'Liens', 'Citations', 'Plantes']
 	},
 	todos: {
 		title: 'Tâches',
@@ -52,11 +54,12 @@ const features = {
 
 const hero = {
 	tagline: 's o l y t o',
-	headline: 'Ton application pour tout.',
+	headline: 'Une application pour tout.',
 	subheadline:
 		'Tâches, calendriers, notes, contacts, bibliothèques — un seul endroit, sans bêtises, tes données restent à toi.',
 	privacy_note: 'Pas de suivi. Pas de publicité. Pas de vente de données. Jamais.',
-	cta: "Commence — c'est gratuit"
+	cta: "Commence — c'est gratuit",
+	screenshot_alt: 'Tableau de bord de solyto'
 };
 
 const why = {
@@ -99,7 +102,9 @@ const pricing = {
 	promise_title: 'Notre promesse',
 	promise:
 		"Si tu n'as pas de capacités financières, tu n'auras jamais à payer pour solyto.",
-	note: "solyto fonctionne léger — pas d'investisseurs, pas de revenus publicitaires, pas de motif lucratif. Juste des serveurs et du temps. Si les coûts dépassent ce qui est soutenable, nous en parlerons ouvertement avec la communauté avant que quoi que ce soit ne change."
+	note: "solyto fonctionne léger — pas d'investisseurs, pas de revenus publicitaires, pas de motif lucratif. Juste des serveurs et du temps. Si les coûts dépassent ce qui est soutenable, nous en parlerons ouvertement avec la communauté avant que quoi que ce soit ne change.",
+	per_period: '/pour toujours',
+	no_catch: 'Pas de carte bancaire. Pas de piège.'
 };
 
 const faq = {
@@ -201,7 +206,8 @@ const how_it_works = {
 const showcase = {
 	title: 'Tout ce dont tu as besoin',
 	subtitle:
-		'Une application, toutes tes affaires. Pas de changement entre une douzaine de services.'
+		'Une application, toutes tes affaires. Pas de changement entre une douzaine de services.',
+	unique_badge: 'Exclusif à solyto'
 };
 
 const ui = {
@@ -239,14 +245,14 @@ const replaces = {
 
 const theming = {
 	label: 'Personnalise-le',
-	title: 'Ton espace, ton style.',
+	title: "Change l'apparence.",
 	description:
 		'Choisis un thème qui te correspond — minimaliste, sombre, chaleureux ou avec du caractère. Fan de Skyrim\u00a0? Il y a un thème pour ça.',
 	exotic_badge: 'Culte'
 };
 
 const opensource = {
-	title: 'Open source. Auto-hébergé. Le tien.',
+	title: 'Open source. Auto-hébergé.',
 	philosophy_title: 'Pourquoi open source ?',
 	philosophy:
 		"Nous avons créé solyto parce que nous en avions assez des services qui disparaissent, pivotent ou se dégradent progressivement. Open source signifie que tu peux lire le code, vérifier nos engagements en matière de confidentialité, forker si nous nous trompons, et le logiciel nous survivra. AGPL-3.0 — libre d'utilisation, de modification et d'auto-hébergement. Si tu le distribues ou le proposes en tant que service, ton code source doit rester ouvert.",
@@ -269,12 +275,20 @@ const downloads = {
 		windows: { label: 'Windows', available: true },
 		macos: { label: 'macOS', available: true },
 		linux: { label: 'Linux', available: true },
-		android: { label: 'Android', available: false },
+		android: { label: 'Android', available: true },
 		ios: { label: 'iOS', available: false }
 	},
 	coming_soon: 'Bientôt disponible',
 	download: 'Télécharger',
 	all_releases: 'Toutes les versions et changelogs'
+};
+
+const meta = {
+	title: 'solyto — Ton application pour tout',
+	description:
+		'Tâches, calendriers, notes, contacts, bibliothèques — un seul endroit, sans bêtises, tes données restent à toi. Pas de suivi. Pas de publicité. Jamais.',
+	social_description:
+		'Tâches, calendriers, notes, contacts, bibliothèques — un seul endroit, sans bêtises, tes données restent à toi.'
 };
 
 export const fr = {
@@ -291,5 +305,6 @@ export const fr = {
 	theming,
 	opensource,
 	downloads,
-	ui
+	ui,
+	meta
 };

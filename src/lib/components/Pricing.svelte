@@ -28,14 +28,14 @@
 			<div class="mt-4 mb-8 text-center">
 				<div class="mb-4 flex items-center justify-center gap-2">
 					<span class="text-5xl font-bold text-gray-900 dark:text-white">$0</span>
-					<span class="text-lg text-gray-500 dark:text-gray-400">/forever</span>
+					<span class="text-lg text-gray-500 dark:text-gray-400">{ts.get.pricing.per_period}</span>
 				</div>
 				<p class="text-gray-600 dark:text-gray-400">
 					{ts.get.pricing.description}
 				</p>
 			</div>
 
-			<div class="dark:border-s-dark-4 border-t border-gray-200 pt-6">
+			<div class="dark:border-s-dark-3 border-t border-gray-200 pt-6">
 				<div
 					class="flex items-start gap-3 rounded-xl bg-s-lightblue/5 p-4 dark:bg-s-lightblue/10"
 				>

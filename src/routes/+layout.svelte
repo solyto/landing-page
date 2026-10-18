@@ -7,30 +7,21 @@
 	let { children } = $props();
 
 	setViewPoint();
-	setTranslation();
+	const ts = setTranslation();
 </script>
 
 <svelte:head>
-	<title>solyto — Your app for everything</title>
-	<meta
-		name="description"
-		content="Todos, calendars, notes, contacts, libraries — one place, no nonsense, your data stays yours. No tracking. No ads. Ever."
-	/>
+	<title>{ts.get.meta.title}</title>
+	<meta name="description" content={ts.get.meta.description} />
 	<link rel="canonical" href="https://solyto.app" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://solyto.app" />
-	<meta property="og:title" content="solyto — Your app for everything" />
-	<meta
-		property="og:description"
-		content="Todos, calendars, notes, contacts, libraries — one place, no nonsense, your data stays yours."
-	/>
+	<meta property="og:title" content={ts.get.meta.title} />
+	<meta property="og:description" content={ts.get.meta.social_description} />
 	<meta property="og:image" content="https://solyto.app/og-image.png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="solyto — Your app for everything" />
-	<meta
-		name="twitter:description"
-		content="Todos, calendars, notes, contacts, libraries — one place, no nonsense, your data stays yours."
-	/>
+	<meta name="twitter:title" content={ts.get.meta.title} />
+	<meta name="twitter:description" content={ts.get.meta.social_description} />
 	<meta name="twitter:image" content="https://solyto.app/og-image.png" />
 	<meta name="theme-color" content="#1dbda5" />
 	<link rel="icon" href={favicon} />

@@ -2,7 +2,9 @@ const features = {
 	libraries: {
 		title: 'Bibliotecas',
 		description:
-			'Rastrea tus libros, música, películas, juegos, recetas, enlaces y citas. Sin recomendaciones algorítmicas, sin spam "también te podría gustar". Solo tus cosas, organizadas.'
+			'Rastrea tus libros, música, películas, juegos, recetas, enlaces y citas. Sin recomendaciones algorítmicas, sin spam "también te podría gustar". Solo tus cosas, organizadas.',
+		tagline: 'Sigue y organiza todos tus medios.',
+		media_types: ['Libros', 'Películas', 'Música', 'Juegos', 'Recetas', 'Enlaces', 'Citas', 'Plantas']
 	},
 	todos: {
 		title: 'Tareas',
@@ -51,11 +53,12 @@ const features = {
 
 const hero = {
 	tagline: 's o l y t o',
-	headline: 'Tu aplicación para todo.',
+	headline: 'Una aplicación para todo.',
 	subheadline:
 		'Tareas, calendarios, notas, contactos, bibliotecas — un solo lugar, sin tonterías, tus datos te pertenecen.',
 	privacy_note: 'Sin seguimiento. Sin anuncios. Sin venta de datos. Nunca.',
-	cta: 'Empieza — es gratis'
+	cta: 'Empieza — es gratis',
+	screenshot_alt: 'Panel de solyto'
 };
 
 const why = {
@@ -97,7 +100,9 @@ const pricing = {
 		'solyto es gratuito de usar. Sin tarjeta de crédito requerida, sin período de prueba, sin limitaciones de funciones.',
 	promise_title: 'Nuestra promesa',
 	promise: 'Si no tienes capacidades financieras, nunca tendrás que pagar por solyto.',
-	note: 'solyto funciona de forma austera — sin inversores, sin ingresos publicitarios, sin ánimo de lucro. Solo servidores y tiempo. Si los costos alguna vez superan lo sostenible, lo hablaremos abiertamente con la comunidad antes de que cambie algo.'
+	note: 'solyto funciona de forma austera — sin inversores, sin ingresos publicitarios, sin ánimo de lucro. Solo servidores y tiempo. Si los costos alguna vez superan lo sostenible, lo hablaremos abiertamente con la comunidad antes de que cambie algo.',
+	per_period: '/para siempre',
+	no_catch: 'Sin tarjeta de crédito. Sin trampa.'
 };
 
 const faq = {
@@ -197,7 +202,8 @@ const how_it_works = {
 
 const showcase = {
 	title: 'Todo lo que necesitas',
-	subtitle: 'Una aplicación, todas tus cosas. Sin cambiar entre una docena de servicios.'
+	subtitle: 'Una aplicación, todas tus cosas. Sin cambiar entre una docena de servicios.',
+	unique_badge: 'Exclusivo de solyto'
 };
 
 const ui = {
@@ -235,14 +241,14 @@ const replaces = {
 
 const theming = {
 	label: 'Hazlo tuyo',
-	title: 'Tu espacio, tu estilo.',
+	title: 'Cambia el aspecto.',
 	description:
 		'Elige un tema que encaje contigo — minimal, oscuro, cálido o con personalidad. ¿Fan de Skyrim? Hay un tema para eso.',
 	exotic_badge: 'Culto'
 };
 
 const opensource = {
-	title: 'Código abierto. Auto-alojado. Tuyo.',
+	title: 'Código abierto. Auto-alojado.',
 	philosophy_title: '¿Por qué código abierto?',
 	philosophy:
 		'Creamos solyto porque estábamos hartos de servicios que desaparecen, cambian de rumbo o se deterioran lentamente. Código abierto significa que puedes leer el código, verificar nuestros compromisos de privacidad, hacer un fork si alguna vez nos equivocamos, y el software nos sobrevive. AGPL-3.0 — libre de usar, modificar y auto-alojar. Si lo distribuyes o lo ejecutas como servicio, tu código fuente también debe quedar abierto.',
@@ -265,12 +271,20 @@ const downloads = {
 		windows: { label: 'Windows', available: true },
 		macos: { label: 'macOS', available: true },
 		linux: { label: 'Linux', available: true },
-		android: { label: 'Android', available: false },
+		android: { label: 'Android', available: true },
 		ios: { label: 'iOS', available: false }
 	},
 	coming_soon: 'Próximamente',
 	download: 'Descargar',
 	all_releases: 'Todas las versiones y changelogs'
+};
+
+const meta = {
+	title: 'solyto — Tu aplicación para todo',
+	description:
+		'Tareas, calendarios, notas, contactos, bibliotecas — un solo lugar, sin tonterías, tus datos te pertenecen. Sin seguimiento. Sin anuncios. Nunca.',
+	social_description:
+		'Tareas, calendarios, notas, contactos, bibliotecas — un solo lugar, sin tonterías, tus datos te pertenecen.'
 };
 
 export const es = {
@@ -287,5 +301,6 @@ export const es = {
 	theming,
 	opensource,
 	downloads,
-	ui
+	ui,
+	meta
 };

@@ -26,7 +26,7 @@
 <section class="w-full py-16 md:py-24">
 	<div class="mx-auto max-w-6xl px-6">
 		<div class="reveal mb-12 text-center" use:reveal>
-			<h2 class="text-3xl md:text-5xl font-bold text-gray-900">
+			<h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
 				{ts.get.showcase.title}
 			</h2>
 		</div>
@@ -41,7 +41,7 @@
 				<span
 					class="self-start text-xs uppercase tracking-widest text-white/70 border border-white/30 rounded-full px-3 py-1"
 				>
-					Unique to solyto
+					{ts.get.showcase.unique_badge}
 				</span>
 				<h3 class="text-3xl font-bold text-white">
 					{ts.get.features.libraries.title}
@@ -50,123 +50,123 @@
 					{ts.get.features.libraries.description}
 				</p>
 				<p class="text-white/50 text-xs mt-auto">
-					Books · Movies · Music · Games · Recipes · Links · Quotes · Plants
+					{ts.get.features.libraries.media_types.join(' · ')}
 				</p>
 			</div>
 
 			<!-- Todos -->
 			<div
-				class="reveal bg-white border-t-4 {accentColors.todos} rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
+				class="reveal bg-white dark:bg-s-dark-2 border-t-4 {accentColors.todos} rounded-2xl p-6 border border-gray-100 dark:border-x-s-dark-3 dark:border-b-s-dark-3 flex flex-col gap-3"
 				use:reveal={{ delay: 80 }}
 			>
-				<h3 class="text-xl font-bold text-gray-900">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
 					{ts.get.features.todos.title}
 				</h3>
-				<p class="text-sm text-gray-500 leading-relaxed">
+				<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					{ts.get.features.todos.description}
 				</p>
 			</div>
 
 			<!-- Calendar -->
 			<div
-				class="reveal bg-white border-t-4 {accentColors.calendar} rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
+				class="reveal bg-white dark:bg-s-dark-2 border-t-4 {accentColors.calendar} rounded-2xl p-6 border border-gray-100 dark:border-x-s-dark-3 dark:border-b-s-dark-3 flex flex-col gap-3"
 				use:reveal={{ delay: 120 }}
 			>
-				<h3 class="text-xl font-bold text-gray-900">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
 					{ts.get.features.calendar.title}
 				</h3>
-				<p class="text-sm text-gray-500 leading-relaxed">
+				<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					{ts.get.features.calendar.description}
 				</p>
 			</div>
 
 			<!-- News -->
 			<div
-				class="reveal bg-white border-t-4 {accentColors.news} rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
+				class="reveal bg-white dark:bg-s-dark-2 border-t-4 {accentColors.news} rounded-2xl p-6 border border-gray-100 dark:border-x-s-dark-3 dark:border-b-s-dark-3 flex flex-col gap-3"
 				use:reveal={{ delay: 160 }}
 			>
-				<h3 class="text-xl font-bold text-gray-900">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
 					{ts.get.features.news.title}
 				</h3>
-				<p class="text-sm text-gray-500 leading-relaxed">
+				<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					{ts.get.features.news.description}
 				</p>
 			</div>
 
 			<!-- Notebook -->
 			<div
-				class="reveal bg-white border-t-4 {accentColors.notebook} rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
+				class="reveal bg-white dark:bg-s-dark-2 border-t-4 {accentColors.notebook} rounded-2xl p-6 border border-gray-100 dark:border-x-s-dark-3 dark:border-b-s-dark-3 flex flex-col gap-3"
 				use:reveal={{ delay: 200 }}
 			>
-				<h3 class="text-xl font-bold text-gray-900">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
 					{ts.get.features.notebook.title}
 				</h3>
-				<p class="text-sm text-gray-500 leading-relaxed">
+				<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					{ts.get.features.notebook.description}
 				</p>
 			</div>
 
 			<!-- Contacts -->
 			<div
-				class="reveal bg-white border-t-4 {accentColors.contacts} rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
+				class="reveal bg-white dark:bg-s-dark-2 border-t-4 {accentColors.contacts} rounded-2xl p-6 border border-gray-100 dark:border-x-s-dark-3 dark:border-b-s-dark-3 flex flex-col gap-3"
 				use:reveal={{ delay: 240 }}
 			>
-				<h3 class="text-xl font-bold text-gray-900">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
 					{ts.get.features.contacts.title}
 				</h3>
-				<p class="text-sm text-gray-500 leading-relaxed">
+				<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					{ts.get.features.contacts.description}
 				</p>
 			</div>
 
 			<!-- Finance -->
 			<div
-				class="reveal bg-white border-t-4 {accentColors.finance} rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
+				class="reveal bg-white dark:bg-s-dark-2 border-t-4 {accentColors.finance} rounded-2xl p-6 border border-gray-100 dark:border-x-s-dark-3 dark:border-b-s-dark-3 flex flex-col gap-3"
 				use:reveal={{ delay: 280 }}
 			>
-				<h3 class="text-xl font-bold text-gray-900">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
 					{ts.get.features.finance.title}
 				</h3>
-				<p class="text-sm text-gray-500 leading-relaxed">
+				<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					{ts.get.features.finance.description}
 				</p>
 			</div>
 
 			<!-- Clipboard -->
 			<div
-				class="reveal bg-white border-t-4 {accentColors.clipboard} rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
+				class="reveal bg-white dark:bg-s-dark-2 border-t-4 {accentColors.clipboard} rounded-2xl p-6 border border-gray-100 dark:border-x-s-dark-3 dark:border-b-s-dark-3 flex flex-col gap-3"
 				use:reveal={{ delay: 320 }}
 			>
-				<h3 class="text-xl font-bold text-gray-900">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
 					{ts.get.features.clipboard.title}
 				</h3>
-				<p class="text-sm text-gray-500 leading-relaxed">
+				<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					{ts.get.features.clipboard.description}
 				</p>
 			</div>
 
 			<!-- Daily Check-In: span-2 -->
 			<div
-				class="reveal col-span-2 bg-white border-t-4 {accentColors.daily_check_in} rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
+				class="reveal col-span-2 bg-white dark:bg-s-dark-2 border-t-4 {accentColors.daily_check_in} rounded-2xl p-6 border border-gray-100 dark:border-x-s-dark-3 dark:border-b-s-dark-3 flex flex-col gap-3"
 				use:reveal={{ delay: 360 }}
 			>
-				<h3 class="text-xl font-bold text-gray-900">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
 					{ts.get.features.daily_check_in.title}
 				</h3>
-				<p class="text-sm text-gray-500 leading-relaxed max-w-lg">
+				<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg">
 					{ts.get.features.daily_check_in.description}
 				</p>
 			</div>
 
 			<!-- Time Tracker -->
 			<div
-				class="reveal bg-white border-t-4 {accentColors.time_tracker} rounded-2xl p-6 border border-gray-100 flex flex-col gap-3"
+				class="reveal bg-white dark:bg-s-dark-2 border-t-4 {accentColors.time_tracker} rounded-2xl p-6 border border-gray-100 dark:border-x-s-dark-3 dark:border-b-s-dark-3 flex flex-col gap-3"
 				use:reveal={{ delay: 400 }}
 			>
-				<h3 class="text-xl font-bold text-gray-900">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white">
 					{ts.get.features.time_tracker.title}
 				</h3>
-				<p class="text-sm text-gray-500 leading-relaxed">
+				<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					{ts.get.features.time_tracker.description}
 				</p>
 			</div>
@@ -180,7 +180,7 @@
 				<span
 					class="self-start text-xs uppercase tracking-widest text-white/70 border border-white/30 rounded-full px-3 py-1"
 				>
-					Unique to solyto
+					{ts.get.showcase.unique_badge}
 				</span>
 				<h3 class="text-2xl font-bold text-white">
 					{ts.get.features.libraries.title}
@@ -192,13 +192,13 @@
 
 			{#each ['todos', 'calendar', 'news', 'notebook', 'contacts', 'finance', 'daily_check_in', 'time_tracker', 'clipboard'] as key, i}
 				<div
-					class="reveal bg-white border-l-4 {accentColors[key]} rounded-2xl p-5 border border-gray-100 flex flex-col gap-2"
+					class="reveal bg-white dark:bg-s-dark-2 border-l-4 {accentColors[key]} rounded-2xl p-5 border border-gray-100 dark:border-y-s-dark-3 dark:border-r-s-dark-3 flex flex-col gap-2"
 					use:reveal={{ delay: i * 60 }}
 				>
-					<h3 class="text-lg font-bold text-gray-900">
+					<h3 class="text-lg font-bold text-gray-900 dark:text-white">
 						{ts.get.features[key as keyof typeof ts.get.features].title}
 					</h3>
-					<p class="text-sm text-gray-500 leading-relaxed">
+					<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 						{ts.get.features[key as keyof typeof ts.get.features].description}
 					</p>
 				</div>
