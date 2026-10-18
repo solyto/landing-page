@@ -3,10 +3,12 @@
 	import favicon from '$lib/assets/favicon.ico';
 	import { setViewPoint } from '$lib/state/Viewpoint.svelte.js';
 	import { setTranslation } from '$lib/state/Translation.svelte';
+	import { setThemeState } from '$lib/state/Theme.svelte';
 
 	let { children } = $props();
 
 	setViewPoint();
+	setThemeState();
 	const ts = setTranslation();
 </script>
 
@@ -27,6 +29,6 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="h-screen w-screen">
+<div class="h-screen w-full">
 	{@render children?.()}
 </div>

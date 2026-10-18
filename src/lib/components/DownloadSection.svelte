@@ -24,13 +24,19 @@
 </script>
 
 <section class="w-full py-16 md:py-24">
-	<div class="mx-auto max-w-5xl px-6">
-		<div class="reveal mb-12 text-center" use:reveal>
-			<h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+	<div class="mx-auto max-w-6xl px-6">
+		<div class="reveal mb-12" use:reveal>
+			<h2 class="text-3xl md:text-5xl font-bold text-c-heading-base dark:text-white mb-4">
 				{ts.get.downloads.title}
 			</h2>
-			<p class="text-lg text-gray-500 dark:text-gray-400">
-				{ts.get.downloads.subtitle}
+			<p class="text-lg text-c-neutral-5 dark:text-gray-400">
+				{ts.get.downloads.subtitle.before}
+				<!-- Drawn as a background: Barlow's own strike-through line sits too high -->
+				<s
+					class="no-underline bg-[linear-gradient(currentColor,currentColor)] bg-[length:100%_2px] bg-[position:0_62%] bg-no-repeat"
+					>{ts.get.downloads.subtitle.struck}</s
+				>
+				{ts.get.downloads.subtitle.after}
 			</p>
 		</div>
 
@@ -39,32 +45,32 @@
 				{#if platform.available}
 					<a
 						href={getLink(key)}
-						class="group flex flex-col items-center gap-3 rounded-2xl border border-s-teal/25 bg-s-teal/5 p-6 transition-all hover:border-s-teal hover:bg-s-teal/10"
+						class="group flex flex-col items-center gap-3 rounded-2xl border border-c-primary/25 bg-c-primary/5 p-6 transition-all hover:border-c-primary hover:bg-c-primary/10"
 					>
-						<span class="text-xl font-bold text-gray-900 dark:text-white">{platform.label}</span>
+						<span class="text-xl font-bold text-c-heading-base dark:text-white">{platform.label}</span>
+
+						<span class="text-sm font-semibold text-c-primary">
+							{key === 'android' ? ts.get.downloads.download_fdroid : ts.get.downloads.download}
+						</span>
 
 						{#if key === 'linux'}
-							<div class="flex rounded-lg border border-s-teal/30 overflow-hidden text-xs font-semibold">
+							<div class="flex rounded-lg border border-c-primary/30 overflow-hidden text-xs font-semibold">
 								{#each linuxFormats as fmt}
 									<button
 										type="button"
 										onclick={(e) => { e.preventDefault(); linuxFormat = fmt.id }}
-										class="px-2 py-1 transition-colors {linuxFormat === fmt.id ? 'bg-s-teal text-white' : 'text-s-teal hover:bg-s-teal/10'}"
+										class="px-2 py-1 transition-colors {linuxFormat === fmt.id ? 'bg-c-primary text-white' : 'text-c-primary hover:bg-c-primary/10'}"
 									>
 										{fmt.label}
 									</button>
 								{/each}
 							</div>
 						{/if}
-
-						<span class="text-xs font-semibold text-s-teal uppercase tracking-widest">
-							{ts.get.downloads.download} ↓
-						</span>
 					</a>
 				{:else}
-					<div class="flex flex-col items-center gap-3 rounded-2xl border border-gray-100 bg-gray-50 p-6 dark:border-s-dark-3 dark:bg-s-dark-2">
-						<span class="text-xl font-bold text-gray-300 dark:text-gray-600">{platform.label}</span>
-						<span class="text-xs font-medium text-gray-300 dark:text-gray-600 uppercase tracking-widest">
+					<div class="flex flex-col items-center gap-3 rounded-2xl border border-c-neutral-1 bg-c-neutral p-6 dark:border-s-dark-3 dark:bg-s-dark-2">
+						<span class="text-xl font-bold text-c-neutral-3 dark:text-gray-600">{platform.label}</span>
+						<span class="text-sm font-medium text-c-neutral-3 dark:text-gray-600">
 							{ts.get.downloads.coming_soon}
 						</span>
 					</div>

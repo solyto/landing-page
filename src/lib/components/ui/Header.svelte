@@ -2,8 +2,6 @@
 	import { urls } from '$lib/config/urls';
 	import { blur, scale } from 'svelte/transition';
 	import IconGlobe from '@lucide/svelte/icons/globe';
-	import IconSun from '@lucide/svelte/icons/sun';
-	import IconMoon from '@lucide/svelte/icons/moon';
 	import IconGithub from '@lucide/svelte/icons/github';
 	import DiscordIcon from '$lib/components/ui/DiscordIcon.svelte';
 	import StaggeredLogo from '$lib/components/ui/StaggeredLogo.svelte';
@@ -24,50 +22,38 @@
 		ts.changeLanguage(code);
 		langOpen = false;
 	}
-
-	// The initial class is set by the inline script in app.html
-	let isDark = $state(
-		typeof document !== 'undefined' && document.documentElement.classList.contains('dark')
-	);
-
-	function toggleTheme(): void {
-		isDark = !isDark;
-		document.documentElement.classList.toggle('dark', isDark);
-		try {
-			localStorage.setItem('theme', isDark ? 'dark' : 'light');
-		} catch {
-			// Storage unavailable (e.g. private mode): the choice just isn't remembered
-		}
-	}
 </script>
 
 <div class="flex w-full items-center justify-center px-4 py-4 md:justify-between">
 	{#if loaded}
-		<div class="hidden md:block" style="width: 56px; height: 71px;">
+		<div class="logo hidden md:block" style="width: 56px; height: 71px;">
 			<StaggeredLogo />
 		</div>
 	{/if}
 	<div class="flex items-center gap-1" in:blur={{ delay: 200 }}>
-		<a
-			href={urls.discord}
-			target="_blank"
-			rel="noopener noreferrer"
-			class="flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold text-gray-600 transition-colors hover:text-gray-900 dark:text-white/60 dark:hover:text-white"
-		>
-			<DiscordIcon class="size-4" />
-			<span class="hidden sm:inline">Discord</span>
-		</a>
-		<a
-			href={urls.github}
-			target="_blank"
-			rel="noopener noreferrer"
-			class="flex items-center gap-1.5 rounded-full px-4 py-2 mr-2 text-sm font-semibold text-gray-600 transition-colors hover:text-gray-900 dark:text-white/60 dark:hover:text-white"
-		>
-			<IconGithub class="size-4" />
-			<span class="hidden sm:inline">GitHub</span>
-		</a>
+		<!-- Hidden on mobile: Discord and GitHub are also linked in the Open Source section -->
+		<div class="hidden items-center md:flex">
+			<a
+				href={urls.discord}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold text-c-neutral-6 transition-colors hover:text-c-heading-base dark:text-white/60 dark:hover:text-white"
+			>
+				<DiscordIcon class="size-4" />
+				<span class="hidden sm:inline">Discord</span>
+			</a>
+			<a
+				href={urls.github}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="flex items-center gap-1.5 rounded-full px-4 py-2 mr-2 text-sm font-semibold text-c-neutral-6 transition-colors hover:text-c-heading-base dark:text-white/60 dark:hover:text-white"
+			>
+				<IconGithub class="size-4" />
+				<span class="hidden sm:inline">GitHub</span>
+			</a>
+		</div>
 		<div
-			class="dark:from-s-dark-4 dark:to-s-dark-5 z-20 flex items-center gap-4 rounded-full bg-gradient-to-r from-s-lightblue to-s-green px-4 py-2 font-bold text-white shadow-sm transition-all hover:bg-s-lightblue/50"
+			class="z-20 flex bg-c-btn dark:bg-s-dark-3 items-center gap-4 rounded-full px-4 py-2 font-bold text-white shadow-sm transition-all"
 		>
 			<div class="relative">
 				<button
@@ -80,14 +66,14 @@
 				{#if langOpen}
 					<div class="fixed inset-0 z-10" onclick={() => (langOpen = false)}></div>
 					<div
-						class="absolute top-full left-0 z-20 mt-2 overflow-hidden rounded-2xl bg-white shadow-xl dark:bg-s-dark-3"
+						class="absolute top-full left-0 z-20 mt-2 overflow-hidden rounded-2xl bg-c-bg-surface shadow-xl dark:bg-s-dark-3"
 						transition:scale={{ duration: 150, start: 0.95 }}
 					>
 						{#each languages as lang}
 							<button
 								onclick={() => selectLang(lang.code)}
-								class="block w-full px-5 py-2.5 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-s-dark-3
-									{ts.locale === lang.code ? 'text-s-lightblue dark:text-s-teal' : ''}"
+								class="block w-full px-5 py-2.5 text-left text-sm font-semibold text-c-neutral-7 transition-colors hover:bg-c-neutral dark:text-gray-200 dark:hover:bg-s-dark-3
+									{ts.locale === lang.code ? 'text-c-btn dark:text-s-teal' : ''}"
 							>
 								{lang.name}
 							</button>
@@ -95,18 +81,6 @@
 					</div>
 				{/if}
 			</div>
-			<button
-				onclick={toggleTheme}
-				aria-label={ts.get.ui.toggle_theme}
-				title={ts.get.ui.toggle_theme}
-				class="flex cursor-pointer items-center rounded-full border-2 border-white/5 p-2 text-white transition-all hover:bg-white/5"
-			>
-				{#if isDark}
-					<IconSun class="size-4" />
-				{:else}
-					<IconMoon class="size-4" />
-				{/if}
-			</button>
 			<a
 				href={urls.login}
 				class="rounded-full border-2 border-white/5 px-4 py-2 font-bold text-white shadow-sm transition-all hover:bg-white/5"

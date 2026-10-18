@@ -30,17 +30,6 @@ export interface Why {
 	points: { title: string; description: string }[];
 }
 
-export interface Pricing {
-	title: string;
-	free_badge: string;
-	description: string;
-	promise_title: string;
-	promise: string;
-	note: string;
-	per_period: string;
-	no_catch: string;
-}
-
 export interface FAQ {
 	title: string;
 	items: { question: string; answer: string }[];
@@ -60,7 +49,6 @@ export interface Meta {
 
 export interface PrivacyGuarantees {
 	title: string;
-	subtitle: string;
 	privacy: { title: string; description: string };
 	servers: { title: string; description: string };
 	no_tracking: { title: string; description: string };
@@ -88,15 +76,14 @@ export interface UI {
 	privacy_policy: string;
 	terms_of_service: string;
 	select_language: string;
-	toggle_theme: string;
 }
 
 export interface Stats {
 	features: string;
 	ads: string;
 	trackers: string;
-	servers: string;
-	free: string;
+	bullshit: string;
+	cost: string;
 }
 
 export interface Theming {
@@ -114,14 +101,13 @@ export interface OpenSource {
 	links: {
 		github: string;
 		selfhosted: string;
-		contribute: string;
 	};
 	license: string;
 }
 
 export interface Downloads {
 	title: string;
-	subtitle: string;
+	subtitle: { before: string; struck: string; after: string };
 	platforms: {
 		windows: { label: string; available: boolean };
 		macos: { label: string; available: boolean };
@@ -131,6 +117,7 @@ export interface Downloads {
 	};
 	coming_soon: string;
 	download: string;
+	download_fdroid: string;
 	all_releases: string;
 }
 
@@ -140,7 +127,6 @@ export interface Translation {
 	how_it_works: HowItWorks;
 	privacy_guarantees: PrivacyGuarantees;
 	why: Why;
-	pricing: Pricing;
 	faq: FAQ;
 	showcase: Showcase;
 	stats: Stats;

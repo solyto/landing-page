@@ -1,9 +1,16 @@
 @import 'tailwindcss';
 @import '@fontsource/open-sans';
 @import '@fontsource/barlow';
+@import '@fontsource/cinzel';
+@import '@fontsource/cinzel-decorative';
+@import '@fontsource/share-tech-mono';
+@import '@fontsource/lora';
+@import '@fontsource/press-start-2p';
 @plugin '@tailwindcss/forms';
 
 @custom-variant dark (&:where(.dark, .dark *));
+/* Set for single-mode themes with a dark background (e.g. Nord), which don't use .dark */
+@custom-variant theme-dark (&:where(.theme-dark, .theme-dark *));
 
 .reveal {
 	opacity: 0;
@@ -46,10 +53,54 @@
 	}
 }
 
+/* Theme hooks, mirroring solyto/app (src/styles/default.css + base.css).     */
+/* The files in static/themes/ override these variables. The defaults must    */
+/* stay inside a layer: theme files are unlayered and then always win, no     */
+/* matter whether Vite injects this stylesheet before or after them.          */
+@layer base {
+	:root {
+		--t-font-body: 'Barlow', sans-serif;
+		--t-font-heading: 'Barlow', sans-serif;
+		--t-gradient-colors: var(--color-s-lightblue), var(--color-s-green);
+	}
+
+	html.dark {
+		--color-c-bg: var(--color-s-dark);
+		--color-c-bg-surface: var(--color-s-dark-2);
+		--color-c-bg-elevated: var(--color-s-dark-3);
+		--color-c-bg-modal: var(--color-s-dark-2);
+		--color-c-nav-hover: var(--color-s-dark-2);
+		--color-c-nav-active: var(--color-c-btn);
+		--color-c-nav-active-text: var(--color-gray-200);
+		--color-c-neutral: var(--color-s-dark-3);
+		--color-c-border: var(--color-s-dark-3);
+	}
+}
+
 html {
-	font-family: 'Barlow', sans-serif;
-	@apply text-gray-700;
+	font-family: var(--t-font-body);
+	@apply text-c-neutral-7;
 	@apply dark:text-white;
+}
+
+.gradient-down {
+	background: linear-gradient(to bottom, var(--t-gradient-colors));
+}
+
+.gradient-right {
+	background: linear-gradient(to right, var(--t-gradient-colors));
+}
+
+html.dark .gradient-down,
+html.dark .gradient-right {
+	background: var(--color-s-dark-3);
+}
+
+/* Wallpaper themes (Skyrim, XP) set a body background sized for the app's   */
+/* one-screen layout. The landing page scrolls, so pin it to the viewport.   */
+body {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 .markdown h1 {
@@ -109,6 +160,38 @@ html {
 	--color-s-dark-3: #2f3741;
 	--color-s-dark-shadow: rgb(8, 54, 47);
 
+	/* Semantic tokens from solyto/app (src/styles/tokens.css) — what themes override */
+	--color-c-bg: #ffffff;
+	--color-c-bg-surface: #ffffff;
+	--color-c-bg-elevated: #ffffff;
+	--color-c-bg-modal: #ffffff;
+	--color-c-nav-hover: #ffffff;
+	--color-c-nav-active: #14a5cd;
+	--color-c-nav-active-text: var(--color-c-neutral-2);
+	--color-c-border: transparent;
+	--color-c-neutral: var(--color-gray-50);
+	--color-c-neutral-1: var(--color-gray-100);
+	--color-c-neutral-2: var(--color-gray-200);
+	--color-c-neutral-3: var(--color-gray-300);
+	--color-c-neutral-4: var(--color-gray-400);
+	--color-c-neutral-5: var(--color-gray-500);
+	--color-c-neutral-6: var(--color-gray-600);
+	--color-c-neutral-7: var(--color-gray-700);
+	--color-c-neutral-8: var(--color-gray-800);
+	--color-c-neutral-9: var(--color-gray-900);
+	--color-c-primary: var(--color-s-teal);
+	--color-c-heading: var(--color-s-darkpurple);
+	--color-c-heading-base: #1f2937;
+	--color-c-btn: var(--color-s-lightblue);
+	--color-c-btn-hover: var(--color-s-blue);
+	--color-c-btn-text: #f9fafb;
+	--color-c-action: var(--color-s-orange);
+	--color-c-action-hover: var(--color-s-yellow);
+	--color-c-danger: var(--color-s-red);
+	--color-c-danger-hover: var(--color-s-purple);
+	--color-c-success: var(--color-s-green);
+	--color-c-warning: var(--color-s-yellow);
+
 	--color-s-primary: var(--color-s-teal);
 	--color-s-secondary: var(--color-s-darkpurple);
 	--color-s-action: var(--color-s-orange);
@@ -137,3 +220,13 @@ html {
 		}
 	}
 }
+
+/* Landing-page adjustments for single themes. The files in static/themes/ stay identical  */
+/* to solyto/app; html[data-theme] (set by ThemeState) outranks their selectors.            */
+
+/* Aero: the app puts content on solid cards, so a 45% glass window is enough there. The */
+/* landing page puts text straight onto the window, which needs to be more opaque.       */
+html[data-theme='aero'] .content-container {
+	background-color: rgba(235, 243, 252, 0.85);
+}
+

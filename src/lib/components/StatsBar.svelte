@@ -8,23 +8,23 @@
 		{ value: '10', label: ts.get.stats.features },
 		{ value: '0', label: ts.get.stats.ads },
 		{ value: '0', label: ts.get.stats.trackers },
-		{ value: 'EU', label: ts.get.stats.servers },
-		{ value: '∞', label: ts.get.stats.free }
+		{ value: '0', label: ts.get.stats.cost },
+		{ value: '0', label: ts.get.stats.bullshit }
 	])
 </script>
 
-<div class="w-full bg-s-teal/8 dark:bg-s-teal/5 border-y border-s-teal/15 dark:border-s-teal/10 py-10 md:py-14">
+<div class="w-full bg-black/3 dark:bg-black/20 theme-dark:bg-black/20 py-10 md:py-14">
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="flex flex-wrap justify-center gap-10 md:gap-20">
 			{#each items as item, i}
 				<div
-					class="reveal flex flex-col items-center gap-1"
+					class="reveal flex flex-col items-center gap-3"
 					use:reveal={{ delay: i * 80 }}
 				>
-					<span class="text-4xl md:text-5xl font-bold text-s-teal tracking-tight tabular-nums">
+					<span class="text-4xl md:text-5xl font-bold text-c-primary tracking-tight tabular-nums">
 						{item.value}
 					</span>
-					<span class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-widest">
+					<span class="text-lg text-c-neutral-5 dark:text-gray-400">
 						{item.label}
 					</span>
 				</div>

@@ -73,18 +73,13 @@ const why = {
 	intro: "Built out of frustration with what's out there.",
 	points: [
 		{
-			title: 'Your data, your servers',
+			title: 'Tools that do their job',
 			description:
-				"Your data stays on our EU servers. We don't share, sell, or even look at it."
+				'Features that do what they should — no AI layers added for the sake of it, no suggestions you never asked for.'
 		},
 		{
 			title: 'Software that respects you',
 			description: 'No guilt-tripping notifications, no artificial urgency, no manipulation.'
-		},
-		{
-			title: 'Free means free',
-			description:
-				"No credit card, no trial, no ads, no hidden tier. If that ever changes, we'll discuss it with our community first."
 		},
 		{
 			title: 'Community first',
@@ -92,24 +87,13 @@ const why = {
 				'We listen to feedback, develop features based on suggestions, and respect your trust.'
 		},
 		{
-			title: 'Tools that do their job',
+			title: 'Free means free',
 			description:
-				'Features that do what they should — no AI layers added for the sake of it, no suggestions you never asked for.'
+				"solyto runs lean — no investors, no profit motive, just servers and time. If costs ever outgrow that, we'll talk about it openly with the community first. And if you can't afford it, you'll never have to pay."
 		}
 	]
 };
 
-const pricing = {
-	title: 'Simple Pricing',
-	free_badge: 'Free',
-	description:
-		'solyto is free to use. No credit card required, no trial period, no feature limitations.',
-	promise_title: 'Our Promise',
-	promise: "If you don't have financial capacities, you will never have to pay for solyto.",
-	note: "solyto runs lean — no investors, no ad revenue, no profit motive. Just servers and time. If costs ever grow beyond what's sustainable, we'll talk about it openly with the community before anything changes.",
-	per_period: '/forever',
-	no_catch: 'No credit card. No catch.'
-};
 
 const faq = {
 	title: 'Questions',
@@ -142,8 +126,7 @@ const faq = {
 };
 
 const privacy_guarantees = {
-	title: 'Your data, your rules',
-	subtitle: 'No bullshit. No compromises.',
+	title: 'Nobody gets your data',
 	privacy: {
 		title: 'End-to-end privacy',
 		description: "We don't track, log, or share your data. Period."
@@ -154,7 +137,7 @@ const privacy_guarantees = {
 	},
 	no_tracking: {
 		title: 'No ads, no tracking',
-		description: 'We will never show ads or sell your data. Free means free.'
+		description: 'We will never show ads or sell your data.'
 	},
 	your_data: {
 		title: 'Export anytime',
@@ -206,8 +189,7 @@ const how_it_works = {
 
 const showcase = {
 	title: 'Everything you need',
-	subtitle:
-		"Everything you'd normally juggle across a dozen different apps — in one place.",
+	subtitle: "Everything you'd normally juggle across a dozen different apps — in one place.",
 	replaces_label: 'Replaces'
 };
 
@@ -217,16 +199,15 @@ const ui = {
 	legal_notice: 'Legal Notice',
 	privacy_policy: 'Privacy Policy',
 	terms_of_service: 'Terms of Service',
-	select_language: 'Select Language',
-	toggle_theme: 'Toggle dark mode'
+	select_language: 'Select Language'
 };
 
 const stats = {
 	features: 'features',
-	ads: 'no ads',
-	trackers: 'no trackers',
-	servers: 'EU servers',
-	free: 'always free'
+	ads: 'ads',
+	trackers: 'trackers',
+	bullshit: 'bullshit',
+	cost: 'cost'
 };
 
 const theming = {
@@ -246,15 +227,19 @@ const opensource = {
 	selfhost_command: 'curl -fsSL "https://raw.githubusercontent.com/solyto/selfhosted/main/setup.sh" | bash',
 	links: {
 		github: 'View on GitHub',
-		selfhosted: 'Self-hosting guide',
-		contribute: 'Contribute'
+		selfhosted: 'Self-hosting guide'
 	},
 	license: 'AGPL-3.0 Licensed'
 };
 
 const downloads = {
 	title: 'Get the app',
-	subtitle: 'Native apps for every platform.',
+	// Rendered as: before ~~struck~~ after
+	subtitle: {
+		before: 'Native apps for',
+		struck: 'every',
+		after: 'almost every platform.'
+	},
 	platforms: {
 		windows: { label: 'Windows', available: true },
 		macos: { label: 'macOS', available: true },
@@ -264,6 +249,7 @@ const downloads = {
 	},
 	coming_soon: 'Coming soon',
 	download: 'Download',
+	download_fdroid: 'Get on F-Droid',
 	all_releases: 'All releases & changelogs'
 };
 
@@ -281,7 +267,6 @@ export const en = {
 	how_it_works,
 	privacy_guarantees,
 	why,
-	pricing,
 	faq,
 	showcase,
 	stats,

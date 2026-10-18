@@ -1,94 +1,77 @@
 <script lang="ts">
+	import IconGitFork from '@lucide/svelte/icons/git-fork'
+	import IconServer from '@lucide/svelte/icons/server'
+	import IconGithub from '@lucide/svelte/icons/github'
+	import IconExternalLink from '@lucide/svelte/icons/external-link'
+	import DiscordIcon from '$lib/components/ui/DiscordIcon.svelte'
 	import { getTranslation } from '$lib/state/Translation.svelte'
 	import { urls } from '$lib/config/urls'
 	import { reveal } from '$lib/actions/reveal'
 
 	const ts = getTranslation()
+
+	const secondaryButton =
+		'inline-flex items-center gap-2 rounded-full border border-c-neutral-3 px-5 py-2.5 text-sm font-semibold text-c-neutral-7 transition-colors hover:border-c-primary hover:text-c-primary dark:border-gray-600 dark:text-gray-300'
 </script>
 
-<section class="w-full bg-black/3 dark:bg-black/20 py-20 md:py-32">
-	<div class="mx-auto max-w-5xl px-6">
-
-		<!-- Header row -->
-		<div class="reveal mb-16 md:mb-24" use:reveal>
-			<div class="flex flex-wrap items-start justify-between gap-6">
-				<h2 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight max-w-xl">
-					{ts.get.opensource.title}
-				</h2>
-				<span class="mt-2 shrink-0 rounded-full border border-s-teal/40 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-s-teal">
-					{ts.get.opensource.license}
-				</span>
-			</div>
+<section class="w-full bg-black/3 dark:bg-black/20 theme-dark:bg-black/20 py-16 md:py-24">
+	<div class="mx-auto max-w-6xl px-6">
+		<div class="reveal mb-12 flex flex-col items-start gap-4 md:mb-16" use:reveal>
+			<h2 class="text-3xl md:text-5xl font-bold text-c-heading-base dark:text-white">
+				{ts.get.opensource.title}
+			</h2>
+			<span class="rounded-full bg-c-primary/10 px-3 py-1 text-sm font-semibold text-c-primary">
+				{ts.get.opensource.license}
+			</span>
 		</div>
 
-		<!-- Two-column content -->
-		<div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
-
-			<!-- Philosophy column -->
-			<div class="reveal flex flex-col gap-6" use:reveal>
-				<span class="text-xs uppercase tracking-widest text-s-teal font-semibold">
-					{ts.get.opensource.philosophy_title}
-				</span>
-				<p class="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-					{ts.get.opensource.philosophy}
-				</p>
-				<div class="flex flex-wrap gap-4 pt-2">
-					<a
-						href={urls.github}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 dark:border-gray-600 dark:text-gray-300 transition-colors hover:border-s-teal hover:text-s-teal"
-					>
-						<svg class="size-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-							<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-						</svg>
-						{ts.get.opensource.links.github}
-					</a>
-					<a
-						href={urls.github}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 dark:border-gray-600 dark:text-gray-300 transition-colors hover:border-s-teal hover:text-s-teal"
-					>
-						{ts.get.opensource.links.contribute}
-					</a>
+		<div class="grid grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2">
+			<div class="reveal flex gap-4" use:reveal>
+				<IconGitFork class="mt-1 size-6 shrink-0 text-c-heading dark:text-c-primary" />
+				<div class="flex min-w-0 flex-col gap-4">
+					<h3 class="text-lg font-bold text-c-heading-base dark:text-white">
+						{ts.get.opensource.philosophy_title}
+					</h3>
+					<p class="leading-relaxed text-c-neutral-5 dark:text-gray-400">
+						{ts.get.opensource.philosophy}
+					</p>
+					<div class="flex flex-wrap gap-3">
+						<a href={urls.github} target="_blank" rel="noopener noreferrer" class={secondaryButton}>
+							<IconGithub class="size-4" />
+							{ts.get.opensource.links.github}
+						</a>
+						<a href={urls.discord} target="_blank" rel="noopener noreferrer" class={secondaryButton}>
+							<DiscordIcon class="size-4" />
+							Discord
+						</a>
+					</div>
 				</div>
 			</div>
 
-			<!-- Self-hosting column -->
-			<div class="reveal flex flex-col gap-6" use:reveal={{ delay: 100 }}>
-				<span class="text-xs uppercase tracking-widest text-s-teal font-semibold">
-					{ts.get.opensource.selfhost_title}
-				</span>
-				<p class="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-					{ts.get.opensource.selfhost_description}
-				</p>
-
-				<!-- Terminal block -->
-				<div class="rounded-xl bg-gray-900 border border-gray-200 dark:border-s-dark-3 overflow-hidden">
-					<div class="flex items-center gap-1.5 px-4 py-3 border-b border-gray-700">
-						<span class="size-2.5 rounded-full bg-gray-600"></span>
-						<span class="size-2.5 rounded-full bg-gray-600"></span>
-						<span class="size-2.5 rounded-full bg-gray-600"></span>
-					</div>
-					<div class="px-5 py-4">
-						<p class="font-mono text-xs leading-relaxed text-s-teal break-all">
-							{ts.get.opensource.selfhost_command}
-						</p>
-					</div>
+			<div class="reveal flex gap-4" use:reveal={{ delay: 100 }}>
+				<IconServer class="mt-1 size-6 shrink-0 text-c-heading dark:text-c-primary" />
+				<div class="flex min-w-0 flex-col gap-4">
+					<h3 class="text-lg font-bold text-c-heading-base dark:text-white">
+						{ts.get.opensource.selfhost_title}
+					</h3>
+					<p class="leading-relaxed text-c-neutral-5 dark:text-gray-400">
+						{ts.get.opensource.selfhost_description}
+					</p>
+					<p
+						class="rounded-xl bg-gray-900 px-5 py-4 font-mono text-xs leading-relaxed break-all text-c-primary"
+					>
+						{ts.get.opensource.selfhost_command}
+					</p>
+					<a
+						href={urls.selfhosted}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="{secondaryButton} self-start"
+					>
+						{ts.get.opensource.links.selfhosted}
+						<IconExternalLink class="size-3.5" />
+					</a>
 				</div>
-
-				<a
-					href={urls.selfhosted}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-flex items-center gap-2 self-start rounded-full border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 dark:border-gray-600 dark:text-gray-300 transition-colors hover:border-s-teal hover:text-s-teal"
-				>
-					{ts.get.opensource.links.selfhosted}
-					<svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-					</svg>
-				</a>
 			</div>
 		</div>
 	</div>

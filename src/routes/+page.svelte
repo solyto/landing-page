@@ -61,16 +61,21 @@
 
 {#if shouldLoad}
 	<div
-		class="flex min-h-screen w-screen flex-col items-center justify-start overflow-x-hidden bg-gradient-to-bl from-white to-gray-100 dark:from-s-dark-2 dark:to-s-dark-3"
+		class="page-container flex min-h-screen w-full flex-col items-center justify-start overflow-x-hidden bg-gradient-to-bl from-c-bg-surface to-c-neutral-1 dark:from-s-dark-2 dark:to-s-dark-3"
 	>
-		<Header {loaded} />
-		{#if content}
-			{#if viewPoint.isMobile}
-				<MobileLandingPage />
-			{:else}
-				<DesktopLandingPage />
+		<!-- content-container: themes like XP and Aero draw it as a window on their wallpaper,
+		     so the header and footer belong inside it. self-stretch keeps it full width. -->
+		<div class="content-container flex w-full grow flex-col items-center self-stretch">
+			<Header {loaded} />
+			{#if content}
+				{#if viewPoint.isMobile}
+					<MobileLandingPage />
+				{:else}
+					<DesktopLandingPage />
+				{/if}
 			{/if}
-		{/if}
+			<Footer {openLegal} {openPrivacy} {openTerms} />
+		</div>
 		{#if legal}
 			<Modal onClose={closeModals} title={ts.get.ui.legal_notice}>
 				<Legal />
@@ -86,6 +91,5 @@
 				<Terms />
 			</Modal>
 		{/if}
-		<Footer {openLegal} {openPrivacy} {openTerms} />
 	</div>
 {/if}

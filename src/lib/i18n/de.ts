@@ -75,9 +75,9 @@ const why = {
 	intro: 'Entstanden aus Frustration über das, was es gibt.',
 	points: [
 		{
-			title: 'Deine Daten, deine Server',
+			title: 'Werkzeuge, die ihren Job machen',
 			description:
-				'Deine Daten verbleiben auf unseren EU-Servern. Wir teilen sie nicht, verkaufen sie nicht und sehen sie uns nicht an.'
+				'Funktionen, die tun, was sie sollen — keine KI-Gimmicks nur des Hypes wegen, keine Vorschläge, die niemand gefragt hat.'
 		},
 		{
 			title: 'Software, die dich respektiert',
@@ -85,34 +85,18 @@ const why = {
 				'Keine Benachrichtigungen, die dir ein schlechtes Gewissen machen, keine künstliche Dringlichkeit, keine Manipulation.'
 		},
 		{
-			title: 'Kostenlos bedeutet kostenlos',
-			description:
-				'Keine Kreditkarte, keine Testphase, keine Werbung, keine versteckten Preisstufen. Wenn sich das jemals ändert, besprechen wir es zuerst mit unserer Community.'
-		},
-		{
 			title: 'Community zuerst',
 			description:
 				'Wir hören auf Feedback, entwickeln Funktionen basierend auf Vorschlägen und respektieren dein Vertrauen.'
 		},
 		{
-			title: 'Werkzeuge, die ihren Job machen',
+			title: 'Kostenlos bedeutet kostenlos',
 			description:
-				'Funktionen, die tun, was sie sollen — keine KI-Gimmicks nur des Hypes wegen, keine Vorschläge, die niemand gefragt hat.'
+				'solyto bleibt bewusst schlank — keine Investoren, kein Gewinnmotiv, nur Server und Zeit. Wenn die Kosten das jemals übersteigen, besprechen wir es zuerst offen mit der Community. Und wenn du es dir nicht leisten kannst, musst du nie bezahlen.'
 		}
 	]
 };
 
-const pricing = {
-	title: 'Einfache Preise',
-	free_badge: 'Kostenlos',
-	description:
-		'solyto ist kostenlos zu verwenden. Keine Kreditkarte erforderlich, keine Testphase, keine Funktionsbeschränkungen.',
-	promise_title: 'Unser Versprechen',
-	promise: 'Wenn du keine finanziellen Möglichkeiten hast, musst du nie für solyto bezahlen.',
-	note: 'solyto bleibt bewusst schlank — keine Investoren, keine Werbeeinnahmen, kein Gewinnmotiv. Nur Server und Zeit. Wenn die Kosten jemals das Tragbare übersteigen, besprechen wir es offen mit der Community, bevor sich etwas ändert.',
-	per_period: '/für immer',
-	no_catch: 'Keine Kreditkarte. Kein Haken.'
-};
 
 const faq = {
 	title: 'Fragen',
@@ -145,8 +129,7 @@ const faq = {
 };
 
 const privacy_guarantees = {
-	title: 'Deine Daten, deine Regeln',
-	subtitle: 'Kein Bullshit. Keine Kompromisse.',
+	title: 'Niemand bekommt deine Daten',
 	privacy: {
 		title: 'Ende-zu-Ende Privatsphäre',
 		description: 'Wir verfolgen, protokollieren oder teilen deine Daten nicht. Punkt.'
@@ -159,7 +142,7 @@ const privacy_guarantees = {
 	no_tracking: {
 		title: 'Keine Werbung, kein Tracking',
 		description:
-			'Wir werden niemals Werbung zeigen oder deine Daten verkaufen. Kostenlos bedeutet kostenlos.'
+			'Wir werden niemals Werbung zeigen oder deine Daten verkaufen.'
 	},
 	your_data: {
 		title: 'Jederzeit exportieren',
@@ -222,16 +205,15 @@ const ui = {
 	legal_notice: 'Impressum',
 	privacy_policy: 'Datenschutzerklärung',
 	terms_of_service: 'Nutzungsbedingungen',
-	select_language: 'Sprache auswählen',
-	toggle_theme: 'Dunkelmodus umschalten'
+	select_language: 'Sprache auswählen'
 };
 
 const stats = {
 	features: 'Funktionen',
-	ads: 'keine Werbung',
-	trackers: 'kein Tracking',
-	servers: 'EU-Server',
-	free: 'immer kostenlos'
+	ads: 'Werbung',
+	trackers: 'Tracker',
+	bullshit: 'Bullshit',
+	cost: 'Kosten'
 };
 
 
@@ -251,15 +233,19 @@ const opensource = {
 	selfhost_command: 'curl -fsSL "https://raw.githubusercontent.com/solyto/selfhosted/main/setup.sh" | bash',
 	links: {
 		github: 'Auf GitHub ansehen',
-		selfhosted: 'Self-Hosting Anleitung',
-		contribute: 'Beitragen'
+		selfhosted: 'Self-Hosting Anleitung'
 	},
 	license: 'AGPL-3.0 Lizenz'
 };
 
 const downloads = {
 	title: 'App herunterladen',
-	subtitle: 'Native Apps für jede Plattform.',
+	// Rendered as: before ~~struck~~ after
+	subtitle: {
+		before: 'Native Apps für',
+		struck: 'jede',
+		after: 'fast jede Plattform.'
+	},
 	platforms: {
 		windows: { label: 'Windows', available: true },
 		macos: { label: 'macOS', available: true },
@@ -269,6 +255,7 @@ const downloads = {
 	},
 	coming_soon: 'Demnächst',
 	download: 'Herunterladen',
+	download_fdroid: 'Jetzt bei F-Droid',
 	all_releases: 'Alle Versionen & Changelogs'
 };
 
@@ -286,7 +273,6 @@ export const de = {
 	how_it_works,
 	privacy_guarantees,
 	why,
-	pricing,
 	faq,
 	showcase,
 	stats,

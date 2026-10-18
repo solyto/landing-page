@@ -4,24 +4,33 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
-			// Apply the theme before first paint: saved choice, else the system setting
+			// Apply the saved theme before first paint (see src/lib/state/Theme.svelte.ts).
+			// default-light/default-dark only toggle .dark; every other theme loads its CSS file.
+			// Without a saved theme, the system setting picks between the two defaults.
 			(function () {
-				var stored = null;
+				var theme = null;
 				try {
-					stored = localStorage.getItem('theme');
+					theme = localStorage.getItem('theme');
 				} catch (e) {}
-				var media = window.matchMedia('(prefers-color-scheme: dark)');
-				var apply = function (dark) {
-					document.documentElement.classList.toggle('dark', dark);
-				};
-				apply(stored ? stored === 'dark' : media.matches);
-				media.addEventListener('change', function (e) {
-					var current = null;
-					try {
-						current = localStorage.getItem('theme');
-					} catch (err) {}
-					if (!current) apply(e.matches);
-				});
+				var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				if (theme === 'default-light' || theme === 'default-dark') {
+					dark = theme === 'default-dark';
+				} else if (
+					theme &&
+					!/^(light|dark|default)$/.test(theme) &&
+					/^[a-z0-9-]+$/.test(theme)
+				) {
+					// (light/dark/default: values saved by earlier versions, treated as "no choice")
+					var link = document.createElement('link');
+					link.id = 'theme-css';
+					link.rel = 'stylesheet';
+					link.href = '/themes/' + theme + '/' + theme + '.css';
+					document.head.appendChild(link);
+					document.documentElement.dataset.theme = theme;
+					return;
+				}
+				document.documentElement.classList.toggle('dark', dark);
+				document.documentElement.dataset.theme = dark ? 'default-dark' : 'default-light';
 			})();
 		</script>
 		%sveltekit.head%
