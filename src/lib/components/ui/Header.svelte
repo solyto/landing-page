@@ -2,6 +2,8 @@
 	import { urls } from '$lib/config/urls';
 	import { blur, scale } from 'svelte/transition';
 	import IconGlobe from '@lucide/svelte/icons/globe';
+	import IconSun from '@lucide/svelte/icons/sun';
+	import IconMoon from '@lucide/svelte/icons/moon';
 	import IconGithub from '@lucide/svelte/icons/github';
 	import DiscordIcon from '$lib/components/ui/DiscordIcon.svelte';
 	import StaggeredLogo from '$lib/components/ui/StaggeredLogo.svelte';
@@ -21,6 +23,21 @@
 	function selectLang(code: string): void {
 		ts.changeLanguage(code);
 		langOpen = false;
+	}
+
+	// The initial class is set by the inline script in app.html
+	let isDark = $state(
+		typeof document !== 'undefined' && document.documentElement.classList.contains('dark')
+	);
+
+	function toggleTheme(): void {
+		isDark = !isDark;
+		document.documentElement.classList.toggle('dark', isDark);
+		try {
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		} catch {
+			// Storage unavailable (e.g. private mode): the choice just isn't remembered
+		}
 	}
 </script>
 
@@ -78,6 +95,18 @@
 					</div>
 				{/if}
 			</div>
+			<button
+				onclick={toggleTheme}
+				aria-label={ts.get.ui.toggle_theme}
+				title={ts.get.ui.toggle_theme}
+				class="flex cursor-pointer items-center rounded-full border-2 border-white/5 p-2 text-white transition-all hover:bg-white/5"
+			>
+				{#if isDark}
+					<IconSun class="size-4" />
+				{:else}
+					<IconMoon class="size-4" />
+				{/if}
+			</button>
 			<a
 				href={urls.login}
 				class="rounded-full border-2 border-white/5 px-4 py-2 font-bold text-white shadow-sm transition-all hover:bg-white/5"

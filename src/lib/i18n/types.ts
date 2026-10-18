@@ -1,14 +1,18 @@
 export interface Features {
-	libraries: { title: string; description: string; tagline: string; media_types: string[] };
-	todos: { title: string; description: string };
-	calendar: { title: string; description: string };
-	contacts: { title: string; description: string };
-	news: { title: string; description: string };
-	notebook: { title: string; description: string };
-	finance: { title: string; description: string };
-	daily_check_in: { title: string; description: string };
-	time_tracker: { title: string; description: string };
-	clipboard: { title: string; description: string };
+	libraries: {
+		title: string;
+		description: string;
+		replaces?: string;
+	};
+	todos: { title: string; description: string; replaces?: string };
+	calendar: { title: string; description: string; replaces?: string };
+	contacts: { title: string; description: string; replaces?: string };
+	news: { title: string; description: string; replaces?: string };
+	notebook: { title: string; description: string; replaces?: string };
+	finance: { title: string; description: string; replaces?: string };
+	daily_check_in: { title: string; description: string; replaces?: string };
+	time_tracker: { title: string; description: string; replaces?: string };
+	clipboard: { title: string; description: string; replaces?: string };
 }
 
 export interface Hero {
@@ -45,7 +49,7 @@ export interface FAQ {
 export interface Showcase {
 	title: string;
 	subtitle: string;
-	unique_badge: string;
+	replaces_label: string;
 }
 
 export interface Meta {
@@ -84,6 +88,7 @@ export interface UI {
 	privacy_policy: string;
 	terms_of_service: string;
 	select_language: string;
+	toggle_theme: string;
 }
 
 export interface Stats {
@@ -94,22 +99,9 @@ export interface Stats {
 	free: string;
 }
 
-export interface ReplacesItem {
-	from: string;
-	to: string;
-}
-
-export interface Replaces {
-	title: string;
-	subtitle: string;
-	items: ReplacesItem[];
-}
-
 export interface Theming {
 	label: string;
 	title: string;
-	description: string;
-	exotic_badge: string;
 }
 
 export interface OpenSource {
@@ -152,7 +144,6 @@ export interface Translation {
 	faq: FAQ;
 	showcase: Showcase;
 	stats: Stats;
-	replaces: Replaces;
 	theming: Theming;
 	opensource: OpenSource;
 	downloads: Downloads;

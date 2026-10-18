@@ -5,7 +5,7 @@
 	const ts = getTranslation()
 </script>
 
-<section class="w-full bg-gray-50 dark:bg-s-dark-2 py-20 md:py-32">
+<section class="w-full py-20 md:py-32">
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="reveal mb-14 md:mb-20" use:reveal>
 			<h2

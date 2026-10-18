@@ -3,48 +3,55 @@ const features = {
 		title: 'Medien',
 		description:
 			'Verwalte deine Bücher, Musik, Filme, Spiele, Rezepte, Links und Zitate. Keine algorithmischen Empfehlungen, kein "Vielleicht gefällt dir auch" Spam. Nur deine Sachen, organisiert.',
-		tagline: 'Verfolge und organisiere all deine Medien.',
-		media_types: ['Bücher', 'Filme', 'Musik', 'Spiele', 'Rezepte', 'Links', 'Zitate', 'Pflanzen']
+		replaces: 'Goodreads / Letterboxd / Last.fm'
 	},
 	todos: {
 		title: 'Aufgaben',
 		description:
-			'Aufgaben, Projekte, Fristen. Hak Dinge ab, fühl dich gut dabei. Keine Gamification, keine Streaks, die dir Schuldgefühle machen.'
+			'Aufgaben, Projekte, Fristen. Hak Dinge ab, fühl dich gut dabei. Keine Gamification, keine Streaks, die dir Schuldgefühle machen.',
+		replaces: 'Google Tasks'
 	},
 	calendar: {
 		title: 'Kalender',
 		description:
-			'Dein Zeitplan ohne Schnickschnack. Synchronisiert mit CalDAV, wenn du es brauchst. Keine "schlauen" Vorschläge, kein Meeting-Spam.'
+			'Dein Zeitplan ohne Schnickschnack. Synchronisiert mit CalDAV, wenn du es brauchst. Keine "schlauen" Vorschläge, kein Meeting-Spam.',
+		replaces: 'Google Kalender'
 	},
 	news: {
 		title: 'Nachrichten',
 		description:
-			'RSS-Feeds aus Quellen deiner Wahl. Kein Algorithmus entscheidet, was du lesen sollst.'
+			'RSS-Feeds aus Quellen deiner Wahl. Kein Algorithmus entscheidet, was du lesen sollst.',
+		replaces: 'Feedly / RSS-Apps'
 	},
 	notebook: {
 		title: 'Notizbuch',
 		description:
-			'Notizen und Gedanken. Schreib Dinge auf, ordne sie, find sie später wieder.'
+			'Notizen und Gedanken. Schreib Dinge auf, ordne sie, find sie später wieder.',
+		replaces: 'Google Keep'
 	},
 	contacts: {
 		title: 'Kontakte',
 		description:
-			'Dein Adressbuch, synchronisiert über Geräte. CardDAV-kompatibel, Datenschutz zuerst.'
+			'Dein Adressbuch, synchronisiert über Geräte. CardDAV-kompatibel, Datenschutz zuerst.',
+		replaces: 'Google Kontakte'
 	},
 	finance: {
 		title: 'Finanzen',
 		description:
-			'Verfolge deine Ausgaben und Einnahmen. Einfache Budgetierung, keine Komplexität, kein Verkauf deiner Finanzdaten.'
+			'Verfolge deine Ausgaben und Einnahmen. Einfache Budgetierung, keine Komplexität, kein Verkauf deiner Finanzdaten.',
+		replaces: 'Budget-Apps'
 	},
 	daily_check_in: {
 		title: 'Täglicher Check-In',
 		description:
-			'Reflektiere deinen Tag. Stimmungsverfolgung, Journaling und Gewohnheitsaufbau an einem Ort.'
+			'Reflektiere deinen Tag. Stimmungsverfolgung, Journaling und Gewohnheitsaufbau an einem Ort.',
+		replaces: 'Daylio / Bearable'
 	},
 	time_tracker: {
 		title: 'Zeiterfassung',
 		description:
-			'Behalte im Blick, wohin deine Zeit geht. Verfolge Projekte, abrechenbare Stunden und Produktivität ohne Stress.'
+			'Behalte im Blick, wohin deine Zeit geht. Verfolge Projekte, abrechenbare Stunden und Produktivität ohne Stress.',
+		replaces: 'Toggl / Clockify'
 	},
 	clipboard: {
 		title: 'Zwischenablage',
@@ -204,8 +211,9 @@ const how_it_works = {
 
 const showcase = {
 	title: 'Alles, was du brauchst',
-	subtitle: 'Eine App, all deine Sachen. Kein Wechsel zwischen Dutzenden Diensten.',
-	unique_badge: 'Nur bei solyto'
+	subtitle:
+		'Alles, wofür du normalerweise ein Dutzend verschiedene Apps brauchst — an einem Ort.',
+	replaces_label: 'Ersetzt'
 };
 
 const ui = {
@@ -214,7 +222,8 @@ const ui = {
 	legal_notice: 'Impressum',
 	privacy_policy: 'Datenschutzerklärung',
 	terms_of_service: 'Nutzungsbedingungen',
-	select_language: 'Sprache auswählen'
+	select_language: 'Sprache auswählen',
+	toggle_theme: 'Dunkelmodus umschalten'
 };
 
 const stats = {
@@ -225,27 +234,10 @@ const stats = {
 	free: 'immer kostenlos'
 };
 
-const replaces = {
-	title: 'Ersetze deinen gesamten persönlichen Stack.',
-	subtitle: 'Alles, wofür du normalerweise ein Dutzend verschiedene Apps brauchst — an einem Ort.',
-	items: [
-		{ from: 'Google Kalender', to: 'Kalender' },
-		{ from: 'Google Tasks / Keep', to: 'Aufgaben + Notizen' },
-		{ from: 'Google Kontakte', to: 'Kontakte' },
-		{ from: 'Feedly / RSS-Apps', to: 'Nachrichten' },
-		{ from: 'Goodreads / Letterboxd / Last.fm', to: 'Medien' },
-		{ from: 'Budget-Apps', to: 'Finanzen' },
-		{ from: 'Toggl / Clockify', to: 'Zeiterfassung' },
-		{ from: 'Daylio / Bearable', to: 'Täglicher Check-In' }
-	],
-};
 
 const theming = {
 	label: 'Mach es deins',
-	title: 'Ändere das Aussehen.',
-	description:
-		'Wähle ein Theme, das zu dir passt — minimal, dunkel, warm oder mit Charakter. Skyrim-Fan? Gibt\'s ein Theme dafür.',
-	exotic_badge: 'Kult'
+	title: 'Themes'
 };
 
 const opensource = {
@@ -298,7 +290,6 @@ export const de = {
 	faq,
 	showcase,
 	stats,
-	replaces,
 	theming,
 	opensource,
 	downloads,

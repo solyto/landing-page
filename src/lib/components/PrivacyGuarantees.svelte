@@ -24,7 +24,7 @@
 	])
 </script>
 
-<section class="w-full py-16 md:py-28">
+<section class="w-full bg-black/3 dark:bg-black/20 py-16 md:py-28">
 	<div class="mx-auto max-w-6xl px-6">
 		<div class="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
 			<div class="reveal reveal-left md:flex-1 md:sticky md:top-24" use:reveal>

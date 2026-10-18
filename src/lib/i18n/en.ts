@@ -3,46 +3,53 @@ const features = {
 		title: 'Libraries',
 		description:
 			'Track your books, music, movies, games, recipes, links and quotes. No algorithmic recommendations, no "you might also like" spam. Just your stuff, organized.',
-		tagline: 'Track and organize your whole media life.',
-		media_types: ['Books', 'Movies', 'Music', 'Games', 'Recipes', 'Links', 'Quotes', 'Plants']
+		replaces: 'Goodreads / Letterboxd / Last.fm'
 	},
 	todos: {
 		title: 'Todos',
 		description:
-			'Tasks, projects, deadlines. Check things off, feel good about it. No gamification, no streaks guilt-tripping you.'
+			'Tasks, projects, deadlines. Check things off, feel good about it. No gamification, no streaks guilt-tripping you.',
+		replaces: 'Google Tasks'
 	},
 	calendar: {
 		title: 'Calendar',
 		description:
-			'Your schedule without the bloat. Syncs with CalDAV if you need it. No "smart" suggestions, no meeting spam.'
+			'Your schedule without the bloat. Syncs with CalDAV if you need it. No "smart" suggestions, no meeting spam.',
+		replaces: 'Google Calendar'
 	},
 	news: {
 		title: 'News',
 		description:
-			'RSS feeds from sources you choose. No algorithm deciding what you should read.'
+			'RSS feeds from sources you choose. No algorithm deciding what you should read.',
+		replaces: 'Feedly / RSS apps'
 	},
 	notebook: {
 		title: 'Notebook',
-		description: 'Notes and thoughts. Write things down, organize them, find them later.'
+		description: 'Notes and thoughts. Write things down, organize them, find them later.',
+		replaces: 'Google Keep'
 	},
 	contacts: {
 		title: 'Contacts',
-		description: 'Your address book, synced across devices. CardDAV compatible, privacy-first.'
+		description: 'Your address book, synced across devices. CardDAV compatible, privacy-first.',
+		replaces: 'Google Contacts'
 	},
 	finance: {
 		title: 'Finance',
 		description:
-			'Track your expenses and income. Simple budgeting, no complexity, no selling your financial data.'
+			'Track your expenses and income. Simple budgeting, no complexity, no selling your financial data.',
+		replaces: 'Budget apps'
 	},
 	daily_check_in: {
 		title: 'Daily Check-In',
 		description:
-			'Reflect on your day. Mood tracking, journaling, and habit building in one place.'
+			'Reflect on your day. Mood tracking, journaling, and habit building in one place.',
+		replaces: 'Daylio / Bearable'
 	},
 	time_tracker: {
 		title: 'Time Tracker',
 		description:
-			'Know where your time goes. Track projects, billable hours, and productivity without the stress.'
+			'Know where your time goes. Track projects, billable hours, and productivity without the stress.',
+		replaces: 'Toggl / Clockify'
 	},
 	clipboard: {
 		title: 'Clipboard',
@@ -199,8 +206,9 @@ const how_it_works = {
 
 const showcase = {
 	title: 'Everything you need',
-	subtitle: 'One app, all your stuff. No switching between a dozen services.',
-	unique_badge: 'Unique to solyto'
+	subtitle:
+		"Everything you'd normally juggle across a dozen different apps — in one place.",
+	replaces_label: 'Replaces'
 };
 
 const ui = {
@@ -209,7 +217,8 @@ const ui = {
 	legal_notice: 'Legal Notice',
 	privacy_policy: 'Privacy Policy',
 	terms_of_service: 'Terms of Service',
-	select_language: 'Select Language'
+	select_language: 'Select Language',
+	toggle_theme: 'Toggle dark mode'
 };
 
 const stats = {
@@ -222,26 +231,9 @@ const stats = {
 
 const theming = {
 	label: 'Make it yours',
-	title: 'Change the look.',
-	description:
-		'Pick a theme that fits your vibe — minimal, dark, warm, or full personality. Skyrim fan? There\'s a theme for that.',
-	exotic_badge: 'Cult'
+	title: 'Themes'
 };
 
-const replaces = {
-	title: 'Replace your entire personal stack.',
-	subtitle: "Everything you'd normally juggle across a dozen different apps — in one place.",
-	items: [
-		{ from: 'Google Calendar', to: 'Calendar' },
-		{ from: 'Google Tasks / Keep', to: 'Todos + Notes' },
-		{ from: 'Google Contacts', to: 'Contacts' },
-		{ from: 'Feedly / RSS apps', to: 'News' },
-		{ from: 'Goodreads / Letterboxd / Last.fm', to: 'Libraries' },
-		{ from: 'Budget apps', to: 'Finance' },
-		{ from: 'Toggl / Clockify', to: 'Time Tracker' },
-		{ from: 'Daylio / Bearable', to: 'Daily Check-In' }
-	],
-};
 
 const opensource = {
 	title: 'Open source. Self-hosted.',
@@ -293,7 +285,6 @@ export const en = {
 	faq,
 	showcase,
 	stats,
-	replaces,
 	theming,
 	opensource,
 	downloads,

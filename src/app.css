@@ -3,6 +3,8 @@
 @import '@fontsource/barlow';
 @plugin '@tailwindcss/forms';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 .reveal {
 	opacity: 0;
 	transform: translateY(24px);

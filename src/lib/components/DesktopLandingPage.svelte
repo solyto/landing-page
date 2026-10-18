@@ -1,9 +1,7 @@
 <script lang="ts">
 	import HeroSection from '$lib/components/HeroSection.svelte'
 	import StatsBar from '$lib/components/StatsBar.svelte'
-	import WhatItReplaces from '$lib/components/WhatItReplaces.svelte'
 	import FeatureShowcase from '$lib/components/FeatureShowcase.svelte'
-	import LibrariesCallout from '$lib/components/LibrariesCallout.svelte'
 	import ThemingSection from '$lib/components/ThemingSection.svelte'
 	import WhySolyto from '$lib/components/WhySolyto.svelte'
 	import PrivacyGuarantees from '$lib/components/PrivacyGuarantees.svelte'
@@ -24,21 +22,13 @@
 
 	<StatsBar />
 
-	<div class="mx-auto w-full max-w-7xl">
-		<WhatItReplaces />
-	</div>
-
 	<FeatureShowcase mobile={false} />
-
-	<LibrariesCallout />
 
 	<ThemingSection />
 
 	<WhySolyto />
 
-	<div class="mx-auto w-full max-w-7xl">
-		<PrivacyGuarantees />
-	</div>
+	<PrivacyGuarantees />
 
 	<DownloadSection />
 
