@@ -19,7 +19,6 @@ export interface Hero {
 	tagline: string;
 	headline: string;
 	subheadline: string;
-	privacy_note: string;
 	cta: string;
 	screenshot_alt: string;
 }

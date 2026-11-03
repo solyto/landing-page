@@ -65,7 +65,6 @@ const hero = {
 	headline: 'Eine App für alles.',
 	subheadline:
 		'Aufgaben, Kalender, Notizen, Kontakte, Medien — ein Ort, kein Blödsinn, deine Daten gehören dir.',
-	privacy_note: 'Keine Verfolgung. Keine Werbung. Kein Datenverkauf. Niemals.',
 	cta: 'Loslegen — kostenlos',
 	screenshot_alt: 'solyto-Dashboard'
 };

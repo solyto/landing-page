@@ -64,7 +64,6 @@ const hero = {
 	headline: 'Une application pour tout.',
 	subheadline:
 		'Tâches, calendriers, notes, contacts, bibliothèques — un seul endroit, sans bêtises, tes données restent à toi.',
-	privacy_note: 'Pas de suivi. Pas de publicité. Pas de vente de données. Jamais.',
 	cta: "Commence — c'est gratuit",
 	screenshot_alt: 'Tableau de bord de solyto'
 };

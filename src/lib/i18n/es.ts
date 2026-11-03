@@ -63,7 +63,6 @@ const hero = {
 	headline: 'Una aplicación para todo.',
 	subheadline:
 		'Tareas, calendarios, notas, contactos, bibliotecas — un solo lugar, sin tonterías, tus datos te pertenecen.',
-	privacy_note: 'Sin seguimiento. Sin anuncios. Sin venta de datos. Nunca.',
 	cta: 'Empieza — es gratis',
 	screenshot_alt: 'Panel de solyto'
 };

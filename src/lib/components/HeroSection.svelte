@@ -31,9 +31,6 @@
 			<div>
 				<TryOutButton />
 			</div>
-			<p class="text-sm text-c-neutral-4 dark:text-gray-500">
-				{ts.get.hero.privacy_note}
-			</p>
 		</div>
 	</div>
 
@@ -67,9 +64,6 @@
 		<div>
 			<TryOutButton />
 		</div>
-		<p class="text-sm text-c-neutral-4 dark:text-gray-500">
-			{ts.get.hero.privacy_note}
-		</p>
 	</div>
 
 	<div

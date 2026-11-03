@@ -63,7 +63,6 @@ const hero = {
 	headline: 'One app for everything.',
 	subheadline:
 		'Todos, calendar, contacts, notes, libraries, news and more — together. No ads, no tracking, no dark patterns. Free forever.',
-	privacy_note: 'No credit card. No trial. No catch.',
 	cta: "Get started — it's free",
 	screenshot_alt: 'solyto dashboard'
 };
