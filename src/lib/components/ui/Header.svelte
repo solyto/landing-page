@@ -3,6 +3,7 @@
 	import { blur, scale } from 'svelte/transition';
 	import IconGlobe from '@lucide/svelte/icons/globe';
 	import IconGithub from '@lucide/svelte/icons/github';
+	import IconUser from '@lucide/svelte/icons/circle-user';
 	import DiscordIcon from '$lib/components/ui/DiscordIcon.svelte';
 	import StaggeredLogo from '$lib/components/ui/StaggeredLogo.svelte';
 	import { getTranslation } from '$lib/state/Translation.svelte';
@@ -17,6 +18,7 @@
 	];
 
 	let langOpen = $state(false);
+	let userOpen = $state(false);
 
 	function selectLang(code: string): void {
 		ts.changeLanguage(code);
@@ -24,14 +26,13 @@
 	}
 </script>
 
-<div class="flex w-full items-center justify-center px-4 py-4 md:justify-between">
+<div class="flex w-full items-center justify-center md:justify-between md:px-4 md:py-4">
 	{#if loaded}
 		<div class="logo hidden md:block" style="width: 56px; height: 71px;">
 			<StaggeredLogo />
 		</div>
 	{/if}
-	<div class="flex items-center gap-1" in:blur={{ delay: 200 }}>
-		<!-- Hidden on mobile: Discord and GitHub are also linked in the Open Source section -->
+	<div class="flex w-full items-center gap-1 md:w-auto" in:blur={{ delay: 200 }}>
 		<div class="hidden items-center md:flex">
 			<a
 				href={urls.discord}
@@ -53,12 +54,31 @@
 			</a>
 		</div>
 		<div
-			class="z-20 flex bg-c-btn dark:bg-s-dark-3 items-center gap-4 rounded-full px-4 py-2 font-bold text-white shadow-sm transition-all"
+			class="z-20 flex w-full items-center gap-2 px-8 py-2 font-bold transition-all md:w-auto md:px-4 md:gap-4 md:rounded-full md:bg-c-btn md:text-white md:shadow-sm md:dark:bg-s-dark-3"
 		>
+			<img src="./logo_cut.png" alt="solyto" class="mr-auto h-8 md:hidden" />
+			<a
+				href={urls.discord}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Discord"
+				class="rounded-full p-2 text-c-neutral-7 dark:text-white md:hidden"
+			>
+				<DiscordIcon class="size-5" />
+			</a>
+			<a
+				href={urls.github}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="GitHub"
+				class="rounded-full p-2 text-c-neutral-7 dark:text-white md:hidden"
+			>
+				<IconGithub class="size-5" />
+			</a>
 			<div class="relative">
 				<button
 					onclick={() => (langOpen = !langOpen)}
-					class="flex cursor-pointer items-center gap-1.5 rounded-full border-2 border-white/5 px-4 py-2 font-bold text-white transition-all hover:bg-white/5"
+					class="flex cursor-pointer items-center gap-1.5 rounded-full border-2 border-white/5 px-2 py-2 font-bold text-c-neutral-7 transition-all hover:bg-white/5 dark:text-white md:px-4 md:text-white"
 				>
 					<IconGlobe class="size-4" />
 					{ts.locale.toUpperCase()}
@@ -81,15 +101,43 @@
 					</div>
 				{/if}
 			</div>
+			<div class="relative md:hidden">
+				<button
+					onclick={() => (userOpen = !userOpen)}
+					class="flex cursor-pointer items-center rounded-full border-2 border-white/5 p-2 text-c-neutral-7 transition-all hover:bg-white/5 dark:text-white"
+				>
+					<IconUser class="size-5" />
+				</button>
+				{#if userOpen}
+					<div class="fixed inset-0 z-10" onclick={() => (userOpen = false)}></div>
+					<div
+						class="absolute top-full right-0 z-20 mt-2 overflow-hidden rounded-2xl bg-c-bg-surface shadow-xl dark:bg-s-dark-3"
+						transition:scale={{ duration: 150, start: 0.95 }}
+					>
+						<a
+							href={urls.login}
+							class="block px-5 py-3 text-base font-semibold whitespace-nowrap text-c-neutral-7 transition-colors hover:bg-c-neutral dark:text-gray-200 dark:hover:bg-s-dark-3"
+						>
+							{ts.get.ui.login}
+						</a>
+						<a
+							href={urls.register}
+							class="block px-5 py-3 text-base font-semibold whitespace-nowrap text-c-neutral-7 transition-colors hover:bg-c-neutral dark:text-gray-200 dark:hover:bg-s-dark-3"
+						>
+							{ts.get.ui.register}
+						</a>
+					</div>
+				{/if}
+			</div>
 			<a
 				href={urls.login}
-				class="rounded-full border-2 border-white/5 px-4 py-2 font-bold text-white shadow-sm transition-all hover:bg-white/5"
+				class="hidden md:block rounded-full border-2 border-white/5 px-4 py-2 font-bold text-white shadow-sm transition-all hover:bg-white/5"
 			>
 				{ts.get.ui.login}
 			</a>
 			<a
 				href={urls.register}
-				class="rounded-full border-2 border-white/5 px-4 py-2 font-bold text-white shadow-sm transition-all hover:bg-white/5"
+				class="hidden md:block rounded-full border-2 border-white/5 px-4 py-2 font-bold text-white shadow-sm transition-all hover:bg-white/5"
 			>
 				{ts.get.ui.register}
 			</a>
