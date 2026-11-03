@@ -30,9 +30,9 @@
 	{#each tiles as tile (tile)}
 		{@const pos = getTilePosition(tile)}
 		<div
-			style="width: 8px; height: 8px; background-image: url('{path
+			style="width: 8px; height: 8px; background-size: {w}px {h}px; background-image: url('{path
 				? path
-				: './'}logo_cut_small.png'); background-position: -{pos.j * 8}px -{pos.i * 8}px;"
+				: './'}logo_cut.png'); background-position: -{pos.j * 8}px -{pos.i * 8}px;"
 			in:fly={{ x: pos.j < pos.i ? -200 : 200, y: pos.j > pos.i ? -200 : 200, duration: 300 }}
 		></div>
 	{/each}
